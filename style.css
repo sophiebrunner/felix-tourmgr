@@ -3,17 +3,18 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
 }
 
 :root {
   --font-family: "Roboto", sans-serif;
   --normal-font: 400;
+  --light-font: 200;
   --bold-font: 700;
-  --bolder-font: 900;
   --bg-color: #fcfcfc;
-  --primary-color: #4756df;
-  --secondary-color: #ff7235;
+  --primary-color: rgb(55, 95, 96);
+  --secondary-color: rgb(155, 145, 130);
+  --dark-color: #003333;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
@@ -40,10 +41,6 @@ a:hover {
   color: var(--secondary-color);
 }
 
-h1 {
-  color: var(--primary-color);
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -51,24 +48,23 @@ nav {
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  padding: 1rem 3.5rem;
+  background-color: var(--dark-color);
 }
 
 .nav-bar {
   display: flex;
-  gap: 1.9rem;
+  gap: 5rem;
 }
 
 .nav-bar__entry {
-  font-weight: var(--bold-font);
+  font-weight: var(--light-font);
+  font-size: 1rem;
 }
 
 .nav-bar__link {
-  color: var(--primary-color);
-  transition: var(--transition);
+  color: white;
 }
 
 .nav.bar__link:hover {
@@ -89,41 +85,41 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  max-width: 68.75rem;
-  margin: auto;
+  background-color: var(--primary-color);
 }
 
 .hero__img {
-  height: 37.5rem;
-  width: 37.5rem;
+  width: 50vw;
 }
 
 .bio {
-  width: 25rem;
-  padding: 0.625rem;
-  border-radius: 6px;
-  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  width: 50vw;
+  padding: 0 2em;
 }
 
 .bio__title {
-  margin-bottom: var(--bottom-margin);
+  margin: 0.5em 0;
+  font-size: 2.5rem;
+  color: white;
 }
 
 .bio__text {
-  line-height: var(--line-height);
-  padding: 0.3rem 0;
+  margin: 0.5em 0;
+  font-size: 2.5rem;
+  color: white;
 }
 
-details {
-  user-select: none;
-}
-
-summary {
-  display: flex;
+.bio__button {
+  all: unset;
   cursor: pointer;
+  padding: 1rem 2rem;
+  border: 2px solid white;
 }
 
-summary::-webkit-details-marker {
-  display: none;
+.bio__button--contact {
+  background-color: white;
+}
+
+.bio__button--portfolio {
+  color: white;
 }
