@@ -12,20 +12,15 @@
   --light-font: 200;
   --bold-font: 700;
   --bg-color: #fcfcfc;
-  --primary-color: rgb(55, 95, 96);
-  --secondary-color: rgb(155, 145, 130);
-  --dark-color: #003333;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
+  --primary-color: rgb(43, 91, 97);
+  --primary-color-transparent: rgba(43, 91, 97, 0.9);
+  --secondary-color: rgba(226, 206, 175, 0.5);
+  --lightwhite-color: rgb(224, 234, 248);
+  --lightblue-color: rgb(220, 231, 233);
+  --dark-color: rgb(30, 35, 50);
   --transition: 0.3s;
-}
-
-html {
+  line-height: 1.7rem;
   scroll-behavior: smooth;
-  font-family: var(--font-family);
 }
 
 ul {
@@ -34,7 +29,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
 }
 
 a:hover {
@@ -42,6 +36,7 @@ a:hover {
 }
 
 nav {
+  height: 10vh;
   position: sticky;
   top: 0;
   left: 0;
@@ -50,7 +45,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 1rem 3.5rem;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color-transparent);
 }
 
 .nav-bar {
@@ -60,16 +55,16 @@ nav {
 
 .nav-bar__entry {
   font-weight: var(--light-font);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .nav-bar__link {
-  color: white;
+  color: var(--lightblue-color);
 }
 
-.nav.bar__link:hover {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+.nav-bar__link:hover {
+  color: var(--dark-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .burger-menu {
@@ -83,13 +78,24 @@ nav {
 
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: var(--primary-color);
+}
+
+.hero__img-container {
+  width: 50vw;
+  height: 90vh;
 }
 
 .hero__img {
   width: 50vw;
+  height: 90vh;
+  object-fit: cover;
+  object-position: 90% 76%;
+}
+
+.bio-container {
+  display: flex;
+  align-items: center;
 }
 
 .bio {
@@ -112,14 +118,27 @@ nav {
 .bio__button {
   all: unset;
   cursor: pointer;
-  padding: 1rem 2rem;
-  border: 2px solid white;
+  padding: 1rem 3rem;
+  border-radius: 2px;
 }
 
 .bio__button--contact {
-  background-color: white;
+  background-color: var(--lightblue-color);
+  border: 2px solid var(--dark-color);
+  box-shadow: 3px 3px 5px darkslategray;
+  margin-right: 2em;
+}
+
+.bio__button--contact:hover {
+  outline: 2px solid var(--lightblue-color);
 }
 
 .bio__button--portfolio {
-  color: white;
+  color: var(--lightblue-color);
+  border: 2px solid var(--lightblue-color);
+  box-shadow: 3px 3px 5px darkslategray;
+}
+
+.bio__button--portfolio:hover {
+  outline: 2px solid var(--dark-color);
 }
