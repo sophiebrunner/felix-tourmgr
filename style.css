@@ -42,6 +42,7 @@ nav {
   justify-content: center;
   padding: 1rem 3.5rem;
   background-color: var(--primary-color-transparent);
+  box-shadow: 1px 1px var(--dark-color);
 }
 
 .nav-bar {
@@ -55,8 +56,35 @@ nav {
   text-shadow: 0 0 20px var(--dark-color);
 }
 
+@media screen and (max-width: 729px) {
+  .nav-bar {
+    position: fixed;
+    background-color: var(--lightblue-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translate(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-bar__entry {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-bar.show {
+    transform: translateX(0);
+  }
+}
+
 .nav-bar__link {
-  color: var(--lightblue-color);
+  color: var(--dark-color);
+  transition: var(--transition);
 }
 
 .nav-bar__link:hover {
@@ -65,7 +93,7 @@ nav {
 }
 
 .burger-menu {
-  color: var(--primary-color);
+  color: var(--dark-color);
   font-size: 2rem;
   border: 0;
   background-color: transparent;
@@ -162,4 +190,23 @@ nav {
 .experiences__img {
   object-fit: cover;
   width: 100vw;
+}
+
+footer {
+  background-color: var(--lightblue-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-icon {
+  width: 2rem;
+  height: 2rem;
 }
