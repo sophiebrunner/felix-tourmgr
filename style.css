@@ -2,15 +2,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 :root {
-  --font-family: "Roboto", serif;
-  --normal-font: 400;
-  --light-font: 200;
-  --bold-font: 700;
   --bg-color: #fcfcfc;
   --primary-color: rgb(43, 91, 97);
   --primary-color-transparent: rgba(43, 91, 97, 0.9);
@@ -19,29 +13,42 @@
   --lightblue-color: rgb(220, 231, 233);
   --dark-color: rgb(30, 35, 50);
   --transition: 0.3s;
-  line-height: 1.7rem;
+  font-family: "Libre Baskerville", serif;
   scroll-behavior: smooth;
 }
 
-ul {
-  list-style-type: none;
+body {
+  margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-nav {
+.page-header {
   position: relative;
+  height: 100vh;
   border: 1px solid hotpink;
+  background-image: url("kfs18-0530-festivalimpressionen-007.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+
+.nav-header {
+  height: 4em;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  border-bottom: 0;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Biryani", cursive;
+  font-weight: 700;
+  color: var(--lightwhite-color);
 }
 
 .menu-toggle {
   border: 1px solid green;
-  display: block;
-  position: absolute;
-  top: 2em;
-  right: 2em;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -50,6 +57,7 @@ nav {
 .nav-menu__link {
   color: var(--lightblue-color);
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .nav-menu__link:hover {
@@ -57,15 +65,13 @@ nav {
 }
 
 .hidden-checkbox {
-  outline: 1px solid red;
+  border: 2px solid white;
   display: block;
   width: 3em;
   height: 2em;
   position: absolute;
-  top: 0;
-  right: 0;
   cursor: pointer;
-  _opacity: 0;
+  opacity: 0;
   z-index: 2;
 }
 
@@ -73,9 +79,6 @@ nav {
   display: block;
   width: 2.5em;
   height: 0.25em;
-  position: relative;
-  top: 0;
-  right: 0;
   background: var(--lightwhite-color);
   border-radius: 3px;
   z-index: 1;
@@ -112,6 +115,7 @@ nav {
 }
 
 .nav-menu {
+  list-style-type: none;
   border: 1px solid blue;
   position: absolute;
   top: 4em;
@@ -134,18 +138,17 @@ nav {
 }
 
 .hero {
-  display: flex;
   background-color: var(--primary-color);
 }
 
 .hero__img-container {
-  width: 50vw;
-  height: 90vh;
+  _width: 100vw;
+  _height: 100vh;
 }
 
 .hero__img {
-  width: 50vw;
-  height: 90vh;
+  _width: 100vw;
+  _height: 90vh;
   object-fit: cover;
   object-position: 90% 76%;
 }
@@ -165,9 +168,9 @@ nav {
 }
 
 .bio__title {
+  font-family: "Biryani", cursive;
   margin: 0.5em 0;
-  letter-spacing: 0.2vw;
-  font-size: 4vw;
+  font-size: 4rem;
   color: var(--lightblue-color);
   text-shadow: 3px 3px var(--dark-color);
 }
