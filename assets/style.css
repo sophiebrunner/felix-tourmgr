@@ -1,3 +1,18 @@
+/* Importing Google Fonts locally */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+
+/* General styling */
+
 *,
 *::before,
 *::after {
@@ -13,7 +28,7 @@
   --lightblue-color: rgb(220, 231, 233);
   --dark-color: #141213;
   --transition: 0.3s;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -22,35 +37,60 @@ body {
   margin: 0;
 }
 
-.sticky-nav {
-  height: 100vh;
-  background-color: var(--dark-color);
-}
+/* Design classes */
 
-nav {
-  color: white;
-  position: sticky;
-  padding: 0.5em;
+.text--light-colored {
+  color: var(--lightwhite-color);
+}
+.text--centered {
   text-align: center;
 }
 
-.nav__primary-navigation,
-.nav__secondary-navigation {
+/* Sticky sidebar with navigation */
+
+.sidebar {
+  height: 100vh;
+  margin: 0;
+  background-color: var(--dark-color);
+  position: sticky;
+  padding: 0.5em;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.sidebar__top,
+.sidebar__down {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__top {
+  align-items: center;
+}
+.sidebar__down {
+  margin: 0;
+  justify-content: flex-end;
+}
+.sidebar__primary-nav,
+.sidebar__secondary-nav {
+  list-style: none;
   padding-left: 0;
 }
-
-.nav__img-wrapper {
+.sidebar__primary-nav a,
+.sidebar__secondary-nav a {
+  text-decoration: none;
+}
+.sidebar__img-wrapper {
   width: 150px;
   height: 150px;
 }
-
-.nav__img {
+.sidebar__img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: 20% 80%;
 }
+
+/* Hero area with title image and quick info */
 
 .hero__img-wrapper {
   max-width: 80vw;
