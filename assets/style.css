@@ -20,13 +20,15 @@
 }
 
 :root {
-  --bg-color: #fcfcfc;
-  --primary-color: rgb(43, 91, 97);
-  --primary-color-transparent: rgba(43, 91, 97, 0.9);
-  --secondary-color: rgba(226, 206, 175, 0.5);
-  --lightwhite-color: rgb(224, 234, 248);
-  --lightblue-color: rgb(220, 231, 233);
-  --dark-color: #141213;
+  --bg-clr-light: #fcfcfc;
+  --bg-clr-dark: #141213;
+  --primary-clr: rgba(44, 89, 95, 100%);
+  --primary-clr-tp: rgba(44, 89, 95, 0.9);
+  --secondary-clr: rgba(204, 184, 146, 100%);
+  --secondary-clr-light-tp: rgba(204, 184, 146, 0.8);
+  --secondary-color-tp: rgba(204, 184, 146, 0.5);
+  --txt-clr-light: rgba(224, 234, 248, 100%);
+  --txt-clr-dark: rgba(1, 2, 5, 100%);
   --transition: 0.3s;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -39,11 +41,31 @@ body {
   grid-template-columns: 25% auto;
 }
 
+h1 {
+  text-shadow: 1px 1px black, 3px 3px var(--primary-clr);
+}
+
 /* Design classes */
 
 .text--light-colored {
-  color: var(--lightwhite-color);
+  color: var(--txt-clr-light);
 }
+
+nav a:hover {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-clr),
+    var(--secondary-clr-light-tp),
+    var(--secondary-color-tp)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .text--centered {
   text-align: center;
 }
@@ -53,7 +75,7 @@ body {
 .sidebar {
   height: 100vh;
   margin: 0;
-  background-color: var(--dark-color);
+  background-color: var(--bg-clr-dark);
   position: sticky;
   padding: 0.5em;
   display: grid;
@@ -107,10 +129,23 @@ body {
   position: relative;
 }
 .hero-section__contact {
-  padding: 1.5em;
+  padding: 1.5em 3em;
   position: absolute;
   bottom: 1em;
-  right: 0;
+  right: 1em;
+  border: 1px solid lightgray;
+  box-shadow: 0.5em 0.5em var(--primary-clr);
+  background-color: var(--bg-clr-light);
+}
 
-  background-color: var(--lightblue-color);
+address > h2,
+h2 ~ p,
+a[href^="tel"],
+a[href^="mailto"] {
+  font-style: normal;
+  color: var(--txt-clr-dark);
+}
+
+address > h2 {
+  margin-top: 0;
 }
