@@ -22,12 +22,12 @@
 :root {
   --bg-clr-light: #fcfcfc;
   --bg-clr-dark: #141213;
-  --primary-clr: rgba(44, 89, 95, 100%);
-  --primary-clr-tp: rgba(44, 89, 95, 0.9);
-  --secondary-clr: rgba(204, 184, 146, 100%);
-  --secondary-clr-light-tp: rgba(204, 184, 146, 0.8);
-  --secondary-color-tp: rgba(204, 184, 146, 0.5);
-  --txt-clr-light: rgba(224, 234, 248, 100%);
+  --highlight-clr: hsl(185, 42%, 23%);
+  --highlight-clr-light: hsl(185, 50%, 30%);
+  --highlight-clr-light-tp: hsl(185, 50%, 30%, 0.8);
+  --highlight-clr-middlelight-tp: hsl(185, 50%, 30%, 0.6);
+  --highlight-clr-very-tp: hsl(185, 50%, 30%, 0.5);
+  --txt-clr-light: rgb(233, 242, 244);
   --txt-clr-dark: rgba(1, 2, 5, 100%);
   --transition: 0.3s;
   font-family: "Poppins", sans-serif;
@@ -37,12 +37,18 @@
 body {
   width: 100vw;
   margin: 0;
-  display: grid;
-  grid-template-columns: 25% auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
-  text-shadow: 1px 1px black, 3px 3px var(--primary-clr);
+  text-shadow: 1px 1px var(--bg-clr-dark), 2px 2px var(--highlight-clr),
+    3px 3px var(--highlight-clr-light);
+}
+
+article {
+  padding: 1em;
+  background-color: var(--highlight-clr-light);
 }
 
 /* Design classes */
@@ -52,15 +58,14 @@ h1 {
 }
 
 nav a:hover {
-  margin: 0 -0.4em;
   padding: 0.1em 0.4em;
-  border-radius: 0.8em 0.3em;
+  border-radius: 40% 10% / 50% 20%;
   background: transparent;
   background-image: linear-gradient(
-    to right,
-    var(--secondary-clr),
-    var(--secondary-clr-light-tp),
-    var(--secondary-color-tp)
+    100deg,
+    var(--highlight-clr-light-tp),
+    var(--highlight-clr-middlelight-tp),
+    var(--highlight-clr-very-tp)
   );
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -73,10 +78,13 @@ nav a:hover {
 /* Sticky sidebar with navigation */
 
 .sidebar {
+  width: 25%;
   height: 100vh;
   margin: 0;
   background-color: var(--bg-clr-dark);
   position: sticky;
+  top: 0;
+  position: -webkit-sticky;
   padding: 0.5em;
   display: grid;
   grid-template-rows: auto auto;
@@ -114,8 +122,14 @@ nav a:hover {
   object-position: 20% 80%;
 }
 
-.content {
-  width: 100%;
+.line {
+  width: 8rem;
+  margin: 0 auto;
+  border-top: 3px solid var(--highlight-clr);
+}
+
+.main-content {
+  width: 75%;
 }
 
 /* Hero area with title image and quick info */
@@ -126,6 +140,7 @@ nav a:hover {
   background-image: url("images/pexels-laura-stanley-2147029.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
   position: relative;
 }
 .hero-section__contact {
@@ -134,18 +149,22 @@ nav a:hover {
   bottom: 1em;
   right: 1em;
   border: 1px solid lightgray;
-  box-shadow: 0.5em 0.5em var(--primary-clr);
+  box-shadow: 0.5em 0.5em var(--highlight-clr);
   background-color: var(--bg-clr-light);
 }
 
-address > h2,
-h2 ~ p,
-a[href^="tel"],
-a[href^="mailto"] {
+.hero-section__contact-header,
+.hero-section__contact-description,
+.hero-section__contact-address {
   font-style: normal;
   color: var(--txt-clr-dark);
 }
 
 address > h2 {
   margin-top: 0;
+}
+
+.home__img {
+  width: 100px;
+  height: 100%;
 }
