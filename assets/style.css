@@ -43,11 +43,16 @@ body {
 
 h1 {
   text-shadow: 1px 1px var(--bg-clr-dark), 2px 2px var(--highlight-clr),
-    3px 3px var(--highlight-clr-light);
+    3px 3px var(--highlight-clr-light-light-tp);
 }
 
 article {
   padding: 2em;
+}
+
+::selection {
+  color: var(--txt-clr-light);
+  background-color: var(--highlight-clr);
 }
 
 /* Design classes */
@@ -176,6 +181,10 @@ nav a:hover {
   gap: 2em;
 }
 
+.home__content-text {
+  margin: 0;
+}
+
 .home__content-img-wrapper {
   border: 3px solid var(--highlight-clr);
   width: 150px;
@@ -183,9 +192,9 @@ nav a:hover {
 }
 
 .home__content-img {
-  width: 150px;
-  height: 150px;
-  transform: translate(-10px, -10px);
+  transform: translate(5px, 5px);
   position: relative;
   z-index: -1;
+  width: 150px;
+  height: 150px;
 }
