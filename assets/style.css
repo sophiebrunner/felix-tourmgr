@@ -28,7 +28,7 @@
   --highlight-clr-middlelight-tp: hsl(185, 50%, 30%, 0.6);
   --highlight-clr-very-tp: hsl(185, 50%, 30%, 0.5);
   --txt-clr-light: rgb(233, 242, 244);
-  --txt-clr-dark: rgba(1, 2, 5, 100%);
+  --txt-clr-dark: hsl(225, 67%, 1%);
   --transition: 0.3s;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -47,8 +47,7 @@ h1 {
 }
 
 article {
-  padding: 1em;
-  background-color: var(--highlight-clr-light);
+  padding: 2em;
 }
 
 /* Design classes */
@@ -157,14 +156,36 @@ nav a:hover {
 .hero-section__contact-description,
 .hero-section__contact-address {
   font-style: normal;
+  text-decoration: none;
   color: var(--txt-clr-dark);
 }
 
-address > h2 {
+.hero-section__contact-header {
   margin-top: 0;
 }
+.hero-section__contact-description {
+  color: var(--highlight-clr);
+}
 
-.home__img {
-  width: 100px;
-  height: 100%;
+.contact-icon {
+  font-style: normal;
+}
+
+.home__content {
+  display: flex;
+  gap: 2em;
+}
+
+.home__content-img-wrapper {
+  border: 3px solid var(--highlight-clr);
+  width: 150px;
+  height: 150px;
+}
+
+.home__content-img {
+  width: 150px;
+  height: 150px;
+  transform: translate(-10px, -10px);
+  position: relative;
+  z-index: -1;
 }
