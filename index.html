@@ -7,89 +7,136 @@
     <meta name="author" content="Sophie Brunner" />
     <meta
       name="description"
-      content="Portfolio website of the tourmanager Felix Meischter"
+      content="Portfolio website of the concert tour manager Felix Meischter"
     />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Felix Meischter | Tourmanager</title>
   </head>
+
   <body>
-    <nav class="sidebar">
-      <div class="sidebar__top">
-        <div class="sidebar__img-wrapper">
+    <nav class="nav">
+      <div class="nav__primary-wrapper">
+        <div class="nav__img-wrapper">
           <img
             src="assets/images/felix-meischter-c-helge-krückeberg.jpg"
             alt=""
-            class="sidebar__img"
+            class="nav__img"
             copyright="Helge Krückeberg"
           />
         </div>
-        <h1 class="text--centered text--light-colored">Felix Meischter</h1>
-        <ul class="sidebar__primary-nav text--centered">
-          <li><a href="#home" class="text--light-colored">Hey</a></li>
-          <li><a href="#about" class="text--light-colored">About me</a></li>
-          <li><a href="#" class="text--light-colored">Portfolio</a></li>
-          <li><a href="#contact" class="text--light-colored">Contact me</a></li>
+        <h1 class="text--centered text--light-colored">
+          <a href="#home" class="text--light-colored link">Felix Meischter</a>
+        </h1>
+        <ul class="nav__primary text--centered">
+          <li>
+            <a href="#intro" class="text--light-colored nav__link link">Hey</a>
+          </li>
+          <li>
+            <a href="#about" class="text--light-colored nav__link link"
+              >About me</a
+            >
+          </li>
+          <li>
+            <a href="#references" class="text--light-colored nav__link link"
+              >References</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="text--light-colored nav__link link"
+              >Contact me</a
+            >
+          </li>
         </ul>
       </div>
-      <div class="sidebar__down">
+      <div class="nav__secondary-wrapper">
         <div class="line"></div>
-        <ul class="sidebar__secondary-nav text--centered">
-          <li><a href="#" class="text--light-colored">Impressum</a></li>
-          <li><a href="#" class="text--light-colored">Datenschutz</a></li>
+        <ul class="nav__secondary text--centered">
+          <li>
+            <a href="#" class="text--light-colored nav__link link">Impressum</a>
+          </li>
+          <li>
+            <a href="#" class="text--light-colored nav__link link"
+              >Datenschutz</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
-    <div class="main-content">
-      <header class="hero-section">
-        <div class="hero-section__img">
-          <address class="hero-section__contact">
-            <span class="contact-icon contact-icon--mail"></span>
-            <h2 class="hero-section__contact-header">Felix Meischter</h2>
-            <p class="hero-section__contact-description">Tourmanager</p>
-            <address>
-              <span class="contact-icon">📞</span>
-              <a href="tel:+491761234567" class="hero-section__contact-address"
-                >+49 176 1234567</a
-              >
-            </address>
-            <address>
-              <span class="contact-icon">📧</span>
-              <a
-                href="mailto:hallo@felix-tourmgr.de"
-                class="hero-section__contact-address"
-                >hallo@tourmgr.de</a
-              >
-            </address>
+
+    <main>
+      <article id="home" class="hero-section">
+        <div class="hero-section__img"></div>
+        <address class="hero-section__contact">
+          <span class="contact-icon contact-icon--mail"></span>
+          <h2 class="hero-section__contact-header">Felix Meischter</h2>
+          <p class="hero-section__contact-description">Tourmanager</p>
+          <address>
+            <span class="contact-icon">📞</span>
+            <a href="tel:+491761234567" class="hero-section__contact-address"
+              >+49 176 1234567</a
+            >
           </address>
+          <address>
+            <span class="contact-icon">✉️</span>
+            <a
+              href="mailto:hallo@felix-tourmgr.de"
+              class="hero-section__contact-address"
+              >hallo@tourmgr.de</a
+            >
+          </address>
+        </address>
+      </article>
+
+      <article id="intro" class="intro">
+        <h2 class="intro__header">Hey 👋</h2>
+        <section class="intro__content">
+          <p class="intro__content-text">
+            Nice to meet you! I'm Felix, a music enthusiast from Germany. I love
+            to travel and I love to troubleshoot. So I combined my passions and
+            started my own business as a tour manager for artists.
+          </p>
+          <div class="intro__content-img-wrapper">
+            <img
+              src="assets/images/felix-meischter-c-paula.jpeg"
+              alt=""
+              class="intro__content-img"
+            />
+          </div>
+        </section>
+      </article>
+
+      <article id="about" class="about">
+        <h2 class="about__header">About me</h2>
+        <section>
+          <h3>Experience</h3>
+          <p></p>
+          <h3>Education</h3>
+          <p>University of Music Franz Liszt Weimar</p>
+          <p>Bachelor of Arts in Musicology and arts adiministration</p>
+        </section>
+      </article>
+
+      <article id="references" class="references">
+        <h2 class="references__header">References</h2>
+        <div class="references-card">
+          <img
+            src="assets/images/milow.jpg"
+            alt=""
+            class="references-card__img"
+          />
+          <h3>Milow</h3>
+          <ul>
+            <li>Nice to meet you Live Tour - 13.11.2022-10.12.2022</li>
+            <li>Nice to meet you Summer Tour - 05.05.2022-21.08.2022</li>
+            <li>TV and radio shows (ZDF Morgenmagazin)</li>
+          </ul>
         </div>
-      </header>
-      <main>
-        <article class="home" id="home">
-          <h2 class="home__header">Hey</h2>
-          <section class="home__content">
-            <p class="home__content-text">
-              Habe die Ehre! Die emsig Schürzenjäger gutheißen. Der nichtsnutzig
-              Jungfer. Der pompös Müßiggang foppen. Das Klimbim liebkosen der
-              adrett Rächer. Der pomadig Eisbein. Das bräsig Erbfeind. Die
-              hochnäsig Eisbein. Der Fuchtel verhaspeln das butterweich
-              Kleintierzuchtverein. Der Narr bohnern das töricht Kesselflicker.
-              Bagage und Lausbub bohnern schamlos Früchtchen.
-            </p>
-            <div class="home__content-img-wrapper">
-              <img
-                src="assets/images/felix-meischter-c-paula.jpeg"
-                alt=""
-                class="home__content-img"
-              />
-            </div>
-          </section>
-        </article>
-        <article id="about"></article>
-        <article id=""></article>
-        <article id="contact"></article>
-      </main>
+      </article>
+
+      <article id="contact" class="contact"><h2>Contact me</h2></article>
       <footer></footer>
-    </div>
+    </main>
+
     <script src="assets/script.js"></script>
   </body>
 </html>

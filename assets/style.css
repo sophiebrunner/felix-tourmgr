@@ -4,14 +4,13 @@
   font-family: "Poppins";
   src: url("fonts/poppins/Poppins-Regular.ttf");
 }
-
 @font-face {
   font-family: "Poppins";
   src: url("fonts/poppins/Poppins-Bold.ttf");
   font-weight: 700;
 }
 
-/* General styling */
+/* General styling and custom properties */
 
 *,
 *::before,
@@ -20,8 +19,9 @@
 }
 
 :root {
-  --bg-clr-light: #fcfcfc;
-  --bg-clr-dark: #141213;
+  --bg-clr-light: hsl(0, 0%, 99%);
+  --bg-clr-dark: hsl(330, 5%, 7%);
+  --bg-clr-gray: hsl(330, 1%, 90%);
   --highlight-clr: hsl(185, 42%, 23%);
   --highlight-clr-light: hsl(185, 50%, 30%);
   --highlight-clr-light-tp: hsl(185, 50%, 30%, 0.8);
@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
 }
 
-h1 {
+h1 > a {
   text-shadow: 1px 1px var(--bg-clr-dark), 2px 2px var(--highlight-clr),
     3px 3px var(--highlight-clr-light-light-tp);
 }
@@ -61,7 +61,63 @@ article {
   color: var(--txt-clr-light);
 }
 
-nav a:hover {
+.text--centered {
+  text-align: center;
+}
+
+.line {
+  width: 8rem;
+  margin: 0 auto;
+  border-top: 3px solid var(--highlight-clr);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Navigation styling */
+
+.nav {
+  width: 25%;
+  height: 100vh;
+  padding: 0.5em;
+  margin: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  background-color: var(--bg-clr-dark);
+}
+.nav__primary-wrapper,
+.nav__secondary-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.nav__primary-wrapper {
+  align-items: center;
+}
+.nav__secondary-wrapper {
+  margin: 0;
+  justify-content: flex-end;
+}
+.nav__primary,
+.nav__secondary {
+  list-style: none;
+  padding-left: 0;
+}
+.nav__img-wrapper {
+  width: 150px;
+  height: 150px;
+}
+.nav__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 20% 80%;
+}
+.nav__link:hover {
   padding: 0.1em 0.4em;
   border-radius: 40% 10% / 50% 20%;
   background: transparent;
@@ -75,69 +131,16 @@ nav a:hover {
   box-decoration-break: clone;
 }
 
-.text--centered {
-  text-align: center;
-}
-
-/* Sticky sidebar with navigation */
-
-.sidebar {
-  width: 25%;
-  height: 100vh;
-  margin: 0;
-  background-color: var(--bg-clr-dark);
-  position: sticky;
-  top: 0;
-  position: -webkit-sticky;
-  padding: 0.5em;
-  display: grid;
-  grid-template-rows: auto auto;
-}
-.sidebar__top,
-.sidebar__down {
-  display: flex;
-  flex-direction: column;
-}
-.sidebar__top {
-  align-items: center;
-}
-.sidebar__down {
-  margin: 0;
-  justify-content: flex-end;
-}
-.sidebar__primary-nav,
-.sidebar__secondary-nav {
-  list-style: none;
-  padding-left: 0;
-}
-.sidebar__primary-nav a,
-.sidebar__secondary-nav a {
-  text-decoration: none;
-}
-.sidebar__img-wrapper {
-  width: 150px;
-  height: 150px;
-}
-.sidebar__img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 20% 80%;
-}
-
-.line {
-  width: 8rem;
-  margin: 0 auto;
-  border-top: 3px solid var(--highlight-clr);
-}
+/* Main content styles */
 
 .main-content {
   width: 75%;
 }
 
-/* Hero area with title image and quick info */
-
+/* Hero section with title image and quick info */
+.hero-section {
+  padding: 0;
+}
 .hero-section__img {
   width: 100%;
   height: 100vh;
@@ -156,7 +159,6 @@ nav a:hover {
   box-shadow: 0.5em 0.5em var(--highlight-clr);
   background-color: var(--bg-clr-light);
 }
-
 .hero-section__contact-header,
 .hero-section__contact-description,
 .hero-section__contact-address {
@@ -164,37 +166,49 @@ nav a:hover {
   text-decoration: none;
   color: var(--txt-clr-dark);
 }
-
 .hero-section__contact-header {
   margin-top: 0;
 }
 .hero-section__contact-description {
   color: var(--highlight-clr);
 }
-
 .contact-icon {
   font-style: normal;
 }
 
-.home__content {
+/* Intro section with short introduction */
+
+.intro__content {
   display: flex;
   gap: 2em;
 }
-
-.home__content-text {
+.intro__content-text {
   margin: 0;
 }
-
-.home__content-img-wrapper {
+.intro__content-img-wrapper {
   border: 3px solid var(--highlight-clr);
   width: 150px;
   height: 150px;
 }
-
-.home__content-img {
+.intro__content-img {
   transform: translate(5px, 5px);
   position: relative;
   z-index: -1;
   width: 150px;
   height: 150px;
+}
+
+/* About section with experiences */
+.about {
+  background-color: var(--bg-clr-gray);
+}
+
+/* References section with artist cards */
+
+.references-card {
+  border: 2px solid var(--bg-clr-gray);
+  width: 100%;
+}
+.references-card__img {
+  width: 100%;
 }
