@@ -24,7 +24,7 @@
             copyright="Helge Krückeberg"
           />
         </div>
-        <h1 class="text--centered text--light-colored">
+        <h1 class="text--centered logo">
           <a href="#home" class="text--light-colored link">Felix Meischter</a>
         </h1>
         <ul class="nav__primary text--centered">
@@ -32,13 +32,13 @@
             <a href="#intro" class="text--light-colored nav__link link">Hey</a>
           </li>
           <li>
-            <a href="#about" class="text--light-colored nav__link link"
-              >About me</a
+            <a href="#references" class="text--light-colored nav__link link"
+              >References</a
             >
           </li>
           <li>
-            <a href="#references" class="text--light-colored nav__link link"
-              >References</a
+            <a href="#about" class="text--light-colored nav__link link"
+              >About me</a
             >
           </li>
           <li>
@@ -49,7 +49,7 @@
         </ul>
       </div>
       <div class="nav__secondary-wrapper">
-        <div class="line"></div>
+        <div class="line--thick"></div>
         <ul class="nav__secondary text--centered">
           <li>
             <a href="#" class="text--light-colored nav__link link">Impressum</a>
@@ -66,10 +66,10 @@
     <main>
       <article id="home" class="hero-section">
         <div class="hero-section__img"></div>
-        <address class="hero-section__contact">
-          <span class="contact-icon contact-icon--mail"></span>
+        <address id="contact-box" class="hero-section__contact">
           <h2 class="hero-section__contact-header">Felix Meischter</h2>
           <p class="hero-section__contact-description">Tourmanager</p>
+          <div class="line--thin"></div>
           <address>
             <span class="contact-icon">📞</span>
             <a href="tel:+491761234567" class="hero-section__contact-address"
@@ -83,6 +83,9 @@
               class="hero-section__contact-address"
               >hallo@tourmgr.de</a
             >
+          </address>
+          <address class="hero-section__contact-address">
+            📍 Hanover, Germany
           </address>
         </address>
       </article>
@@ -105,17 +108,6 @@
         </section>
       </article>
 
-      <article id="about" class="about">
-        <h2 class="about__header">About me</h2>
-        <section>
-          <h3>Experience</h3>
-          <p></p>
-          <h3>Education</h3>
-          <p>University of Music Franz Liszt Weimar</p>
-          <p>Bachelor of Arts in Musicology and arts adiministration</p>
-        </section>
-      </article>
-
       <article id="references" class="references">
         <h2 class="references__header">References</h2>
         <div class="references-card">
@@ -124,16 +116,53 @@
             alt=""
             class="references-card__img"
           />
-          <h3>Milow</h3>
+          <h3 class="references-card__header">
+            <a
+              href="http://milow.com/"
+              class="references-card__header-link link"
+              >Milow</a
+            >
+          </h3>
           <ul>
-            <li>Nice to meet you Live Tour - 13.11.2022-10.12.2022</li>
-            <li>Nice to meet you Summer Tour - 05.05.2022-21.08.2022</li>
-            <li>TV and radio shows (ZDF Morgenmagazin)</li>
+            <li>NICE TO MEET YOU LIVE TOUR (13.11.2022 - 10.12.2022)</li>
+            <li>NICE TO MEET YOU SUMMER TOUR (05.05.2022 - 21.08.2022)</li>
+            <li>TV and radio shows (e. g. <i>ZDF Morgenmagazin</i>)</li>
           </ul>
         </div>
       </article>
 
-      <article id="contact" class="contact"><h2>Contact me</h2></article>
+      <article id="about" class="about">
+        <h2 class="about__header">About me</h2>
+        <section>
+          <h3>Experience</h3>
+          <h4>Self-employed</h4>
+          <p>May 2022 - present</p>
+          <p>Tour management MILOW</p>
+          <h4>NDR Radio Philharmonic</h4>
+          <p>Oct 2019 - Apr 2022</p>
+          <p>First Assistant & Artistic Administation</p>
+          <p>Aug 2018 - Sep 2019</p>
+          <p>Traineeship Arts Management</p>
+          <h3>Languages</h3>
+          <ul>
+            <li>English - Full professional proficiency</li>
+            <li>German - Native proficiency</li>
+            <li>French - Elementary proficiency</li>
+          </ul>
+          <h3>Education</h3>
+          <h4>University of Music Franz Liszt Weimar</h4>
+          <p>2013 - 2018</p>
+          <p>Bachelor of Arts in Musicology and arts adiministration</p>
+          <h4>German Choral Association</h4>
+          <p>2014 - 2015</p>
+          <p>Further education project management for choirs</p>
+        </section>
+      </article>
+
+      <article id="contact">
+        <h2>Contact me</h2>
+        <address class="contact"></address>
+      </article>
       <footer></footer>
     </main>
 
