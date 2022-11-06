@@ -7,87 +7,42 @@
     <meta name="author" content="Sophie Brunner" />
     <meta
       name="description"
-      content="Portfolio website of the concert tour manager Felix Meischter"
+      content="Portfolio website of the concert tour and cultural manager Felix Meischter"
     />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Felix Meischter | Tourmanager</title>
   </head>
 
   <body>
-    <nav class="nav">
-      <div class="nav__primary-wrapper">
-        <div class="nav__img-wrapper">
-          <img
-            src="assets/images/felix-meischter-c-helge-krückeberg.jpg"
-            alt=""
-            class="nav__img"
-            copyright="Helge Krückeberg"
-          />
-        </div>
-        <h1 class="text--centered logo">
-          <a href="#home" class="text--light-colored link">Felix Meischter</a>
-        </h1>
-        <ul class="nav__primary text--centered">
-          <li>
-            <a href="#intro" class="text--light-colored nav__link link">Hey</a>
-          </li>
-          <li>
-            <a href="#references" class="text--light-colored nav__link link"
-              >References</a
-            >
-          </li>
-          <li>
-            <a href="#about" class="text--light-colored nav__link link"
-              >About me</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="text--light-colored nav__link link"
-              >Contact me</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="nav__secondary-wrapper">
-        <div class="line--thick"></div>
-        <ul class="nav__secondary text--centered">
-          <li>
-            <a href="#" class="text--light-colored nav__link link">Impressum</a>
-          </li>
-          <li>
-            <a href="#" class="text--light-colored nav__link link"
-              >Datenschutz</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-
     <main>
-      <article id="home" class="hero-section">
-        <div class="hero-section__img"></div>
-        <address id="contact-box" class="hero-section__contact">
-          <h2 class="hero-section__contact-header">Felix Meischter</h2>
-          <p class="hero-section__contact-description">Tourmanager</p>
-          <div class="line--thin"></div>
-          <address>
-            <span class="contact-icon">📞</span>
-            <a href="tel:+491761234567" class="hero-section__contact-address"
-              >+49 176 1234567</a
-            >
-          </address>
-          <address>
-            <span class="contact-icon">✉️</span>
-            <a
-              href="mailto:hallo@felix-tourmgr.de"
-              class="hero-section__contact-address"
-              >hallo@tourmgr.de</a
-            >
-          </address>
-          <address class="hero-section__contact-address">
-            📍 Hanover, Germany
-          </address>
-        </address>
+      <article id="hero-section" class="hero-section">
+        <img
+          src="assets/images/felix-meischter-c-helge-krückeberg.jpg"
+          alt="Headshot of Felix Meischter."
+          copyright="Helge Krückeberg"
+          class="hero-section__headshot"
+        />
+        <h1>Felix Meischter</h1>
+        <p class="hero-section__description--job">Tourmanager</p>
+        <p class="hero-section__description--contact">Get in touch</p>
+        <img
+          src="./assets/icons/Instagram Logo Pack/02 White Glyph/Instagram_Glyph_White.png"
+          alt=""
+          class="hero-section__icon"
+        />
+        <img
+          src="./assets/icons/icons8-linkedin-48.png"
+          alt=""
+          class="hero-section__icon"
+        />
+        <div class="wrapper">
+          <div class="lid lid--closed"></div>
+          <div class="lid lid--opened"></div>
+          <div class="envelope"></div>
+          <div class="letter">
+            <p>Hey</p>
+          </div>
+        </div>
       </article>
 
       <article id="intro" class="intro">
@@ -98,13 +53,8 @@
             to travel and I love to troubleshoot. So I combined my passions and
             started my own business as a tour manager for artists.
           </p>
-          <div class="intro__content-img-wrapper">
-            <img
-              src="assets/images/felix-meischter-c-paula.jpeg"
-              alt=""
-              class="intro__content-img"
-            />
-          </div>
+          <button>Resume</button>
+          <button>Portfolio</button>
         </section>
       </article>
 
@@ -163,7 +113,12 @@
         <h2>Contact me</h2>
         <address class="contact"></address>
       </article>
-      <footer></footer>
+      <footer>
+        <a target="_blank" href="https://icons8.com/icon/uzhJQ5CyNoaH/linkedin"
+          >LinkedIn</a
+        >
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </footer>
     </main>
 
     <script src="assets/script.js"></script>
