@@ -25,47 +25,51 @@
         <h1>Felix Meischter</h1>
         <p class="hero-section__description--job">Tourmanager</p>
         <p class="hero-section__description--contact">Get in touch</p>
-        <img
-          src="./assets/icons/Instagram Logo Pack/02 White Glyph/Instagram_Glyph_White.png"
-          alt=""
-          class="hero-section__icon"
-        />
-        <img
-          src="./assets/icons/icons8-linkedin-48.png"
-          alt=""
-          class="hero-section__icon"
-        />
-        <div class="wrapper">
-          <div class="lid lid--closed"></div>
-          <div class="lid lid--opened"></div>
-          <div class="envelope"></div>
-          <div class="letter">
-            <p>Hey</p>
+        <div class="hero-section__flex-container">
+          <div class="hero-section__icon-wrapper" id="icon--email">
+            <div class="lid lid--closed"></div>
+            <div class="lid lid--opened"></div>
+            <div class="envelope"></div>
+            <div class="letter">
+              <a href="mailto:felix@meischter.de">@Hello</a>
+            </div>
           </div>
+          <img
+            src="./assets/icons/Instagram Logo Pack/02 White Glyph/Instagram_Glyph_White.png"
+            alt="Instagram logo."
+            class="hero-section__icon"
+            id="icon--instagram"
+          />
+          <img
+            src="./assets/icons/LinkedIn-Logos 5/In/Digital/White/2x/In-White-128-Γäó@2x.png"
+            alt="LinkedIn logo."
+            class="hero-section__icon"
+            id="icon--linkedin"
+          />
         </div>
       </article>
 
       <article id="intro" class="intro">
-        <h2 class="intro__header">Hey 👋</h2>
+        <h2 class="intro__header">Hello - nice to meet you.</h2>
         <section class="intro__content">
-          <p class="intro__content-text">
-            Nice to meet you! I'm Felix, a music enthusiast from Germany. I love
-            to travel and I love to troubleshoot. So I combined my passions and
-            started my own business as a tour manager for artists.
+          <p class="intro__text">
+            I am Felix and I am passionate about concerts. </br>
+            When things get hectic around me, I am at my best. </br> 
+            Even with the best planning, problems crop up at the last minute. </br>
+            Then I keep a cool head and find a solution. </br>
+            So that in the end exactly what I burn for can take place: </br>
+            the perfect live moment, the magic of music.
           </p>
-          <button>Resume</button>
-          <button>Portfolio</button>
+          <div class="intro__flex-container">
+            <a href="#references" class="intro__button">References</a>
+            <a href="#resume" class="intro__button">Resume</a>
+          </div>
         </section>
       </article>
 
       <article id="references" class="references">
         <h2 class="references__header">References</h2>
         <div class="references-card">
-          <img
-            src="assets/images/milow.jpg"
-            alt=""
-            class="references-card__img"
-          />
           <h3 class="references-card__header">
             <a
               href="http://milow.com/"
@@ -81,9 +85,9 @@
         </div>
       </article>
 
-      <article id="about" class="about">
-        <h2 class="about__header">About me</h2>
-        <section>
+      <article id="resume" class="resume">
+        <h2 class="resume__header">About me</h2>
+        <section class="resume__content">
           <h3>Experience</h3>
           <h4>Self-employed</h4>
           <p>May 2022 - present</p>
@@ -109,16 +113,7 @@
         </section>
       </article>
 
-      <article id="contact">
-        <h2>Contact me</h2>
-        <address class="contact"></address>
-      </article>
-      <footer>
-        <a target="_blank" href="https://icons8.com/icon/uzhJQ5CyNoaH/linkedin"
-          >LinkedIn</a
-        >
-        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-      </footer>
+      <footer></footer>
     </main>
 
     <script src="assets/script.js"></script>
