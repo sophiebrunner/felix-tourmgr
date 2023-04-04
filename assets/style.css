@@ -76,11 +76,20 @@ a {
 
 .header__heading {
   color: var(--color-white);
-  box-shadow: 10px 10px solid var(--color-highlight--light);
+  text-shadow: 2px 2px var(--color-highlight--light);
+}
+
+.header__subheading {
+  color: var(--color-white);
 }
 
 .header__homelink {
   text-decoration: none;
+}
+
+.header__item::before,
+.header__item::after {
+  content: " // ";
 }
 
 .hero {
@@ -89,12 +98,14 @@ a {
 }
 
 .hero__headshot {
-  border-radius: 0.1rem;
-  box-shadow: 0.25em 0.25em #008080;
-  max-width: 100px;
   position: relative;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.hero__headshot img {
+  width: 100%;
 }
 
 .visually-hidden {
