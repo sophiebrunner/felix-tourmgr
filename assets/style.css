@@ -34,8 +34,9 @@
 :root {
   --color-black: #1e2130;
   --color-white: #f7f7f9;
-  --color-highlight: #275962;
-  --color-highlight--light: #a1b9c8;
+  --color-blue: #275960;
+  --color-steelblue: #4682b4;
+  --color-blue--light: #a1b9c8;
   --device-xs: 360px;
   --device-sm: 576px;
   --device-md: 768px;
@@ -70,21 +71,61 @@ a {
 }
 
 .header {
-  padding: 2rem;
-  background-color: var(--color-highlight);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 2rem 2rem 0 2rem;
+  background-color: var(--color-blue);
 }
 
 .header__heading {
+  font-size: 2rem;
+  text-transform: lowercase;
+  -webkit-text-stroke: 1px var(--color-black);
   color: var(--color-white);
-  text-shadow: 2px 2px var(--color-highlight--light);
 }
 
 .header__subheading {
+  text-transform: lowercase;
   color: var(--color-white);
+  -webkit-text-stroke: 0.5px var(--color-black);
+  font-size: 1rem;
 }
 
 .header__homelink {
+  color: var(--color-white);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header__homelink:hover {
+  color: var(--color-blue--light);
+}
+
+.header__navigation--list {
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 2rem;
+  background-color: #ededed;
+}
+
+.header__button {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+[aria-expanded="true"] ~ .header__navigation--list {
+  display: block;
 }
 
 .header__item::before,
@@ -92,20 +133,45 @@ a {
   content: " // ";
 }
 
+.header__navigation--toggle {
+  z-index: 1;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+  display: block;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .hero {
   padding: 2rem;
-  background-color: var(--color-highlight);
+  background-color: var(--color-blue);
 }
 
 .hero__headshot {
   position: relative;
   width: 100%;
+  height: 18.75rem;
+  border: 1px solid var(--color-black);
   left: 50%;
   transform: translateX(-50%);
 }
 
 .hero__headshot img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+
+  z-index: 0;
   width: 100%;
+}
+
+.hero__description {
+  margin-top: 2rem;
+  color: var(--color-white);
+  font-size: 1.25rem;
 }
 
 .visually-hidden {
@@ -129,4 +195,8 @@ a {
   width: 24px;
   height: 24px;
   fill: var(--color-white);
+}
+
+.about {
+  padding: 2rem;
 }
