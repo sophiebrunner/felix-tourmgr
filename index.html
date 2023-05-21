@@ -17,12 +17,12 @@
         <header class="header">
             <a href="/" class="header__homelink">
                 <h1 class="header__heading">Felix Meischter</h1>
-                <p class="header__subheading">
-                        <span>tour management</span>
-                    <span aria-hidden="true"> & </span>
-                    <span class="visually-hidden">and</span>
-                    <span>arts administration</span>
-                </p>
+                <div class="header__subheading">
+                    <p><span>tour management.</span>
+                        <span aria-hidden="true"></span>
+                        <span class="visually-hidden">and</span></p>
+                    <p>arts administration.</p>
+                </div>
             </a>
             <nav class="header__navigation">
                 <div class="ribbon ribbon--1"></div>
@@ -59,7 +59,7 @@
                 </p>
                 <nav class="socials">
                     <ul class="socials__list list">
-                        <li class="socials__item">
+                        <li>
                             <a href="https://www.instagram.com/femei93/?hl=de">
                                 <img
                                         src="./assets/icons/Instagram.png"
@@ -110,7 +110,7 @@
                 <ul class="services__list list">
                     <li class="services__item">
                         <h3 class="services__item-heading">Tour Management</h3>
-                        <ul class="services__sublist list">
+                        <ul class="services__sublist">
                             <li class="services__sublist-item">
                                 Lorem ipsum dolor sit amet, consetetur
                             </li>
@@ -120,7 +120,7 @@
                     </li>
                     <li class="services__item">
                         <h3 class="services__item-heading">Arts Administration</h3>
-                        <ul class="services__sublist list">
+                        <ul class="services__sublist">
                             <li class="services__sublist-item">Lorem ipsum dolor</li>
                             <li class="services__sublist-item">
                                 Lorem ipsum dolor sit amet, consetetur
@@ -137,21 +137,14 @@
             <section class="contact" id="contact">
                 <h2 class="contact__heading">Contact me</h2>
                 <address class="contact__address">
-                    <a href="mailto:felix@tourmanager.de">felix@tourmanager.de</a>
+                    <img class="contact__icon" src="./assets/icons/senden.png" alt="Paper plane">
+                    <a class="contact__link" href="mailto:felix@tourmanager.de">felix@tourmanager.de</a>
                 </address>
                 <p class="contact__languages">You can talk to me in</p>
-                <ul class="contact__languages-list list">
-                    <li class="contact__languages-item">
-                        <img src="./assets/icons/united-kingdom.png" alt="Flag United Kingdom">
-                        <p>English</p>
-                    </li>
-                    <li class="contact__languages-item">
-                        <img src="./assets/icons/germany.png" alt="Flag Germany">
-                        <p>German</p>
-                    </li>
-                    <li class="contact__languages-item">
-                        <img src="./assets/icons/france.png" alt="Flag France">
-                        <p>French</p></li>
+                <ul class="contact__languages-list">
+                    <li>English</li>
+                    <li>German</li>
+                    <li>French</li>
                 </ul>
             </section>
         </main>
