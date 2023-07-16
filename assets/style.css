@@ -1,27 +1,69 @@
 /* Fonts */
 
-/* pt-sans-regular - latin */
+/* playfair-display-regular - latin */
 @font-face {
-	font-family: "Atkinson Hyperlegible";
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Playfair Display';
 	font-style: normal;
 	font-weight: 400;
-	src: local(""),
-		/* IE6-IE8 */
-	url("./fonts/Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2"),
-		/* Super Modern Browsers */
-	url("./fonts/Atkinson-Hyperlegible-Bold-102.woff") format("woff");
+	src: url('./fonts/playfair-display-v30-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/playfair-display-v30-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
-
-/* pt-sans-700 - latin */
+/* playfair-display-700 - latin */
 @font-face {
-	font-family: "Atkinson Hyperlegible";
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Playfair Display';
 	font-style: normal;
 	font-weight: 700;
-	src: local(""),
-		/* IE6-IE8 */
-	url("./fonts/Atkinson-Hyperlegible-Bold-102a.woff2") format("woff2"),
-		/* Super Modern Browsers */
-	url("./fonts/Atkinson-Hyperlegible-Bold-102.woff") format("woff");
+	src: url('./fonts/playfair-display-v30-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/playfair-display-v30-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* playfair-display-900 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 900;
+	src: url('./fonts/playfair-display-v30-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/playfair-display-v30-latin-900.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* quicksand-500 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 500;
+	src: url('./fonts/quicksand-v30-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/quicksand-v30-latin-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* quicksand-600 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 600;
+	src: url('./fonts/quicksand-v30-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/quicksand-v30-latin-600.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* quicksand-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./fonts/quicksand-v30-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/quicksand-v30-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* quicksand-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./fonts/quicksand-v30-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('./fonts/quicksand-v30-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* General styling and custom properties */
@@ -33,13 +75,12 @@
 }
 
 :root {
-	--color-black: #1e2130;
-	--color-white: #f7f7f9;
+	--color-black: #000000;
+	--color-white: #ffffff;
 	--color-base: #1E2130;
 	--color-highlight--1: #18204A;
-	--color-highlight--2: #4D557D;
-	--color-highlight--3: #28367D;
-	--color-highlight--4: #7D8AC9;
+	--color-highlight--2: #0D5160;
+	--color-highlight--3: #E1EAEC;
 	--device-xs: 360px;
 	--device-sm: 576px;
 	--device-md: 768px;
@@ -65,41 +106,28 @@ header, footer, section {
 	padding: 1.5rem 2rem;
 }
 
-main {
-	z-index: 1;
-	position: sticky;
-}
-
-h1, h2, h3,
-.navigation__link {
-	text-transform: lowercase;
-}
-
 a {
 	color: var(--color-highlight--1);
 }
 
 a:focus {
-	outline: 3px solid var(--color-highlight--4);
+	outline: 3px solid var(--color-highlight--2);
 	outline-offset: 3px;
 	text-decoration: none;
 }
 
 ::selection {
 	color: var(--color-white);
-	background-color: var(--color-highlight--4);
+	background-color: var(--color-highlight--2);
 }
 
 .header {
-	z-index: 1000;
-	position: sticky;
-	top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: .5rem;
 	width: 100%;
-	padding-block: .5rem;
+	padding-block: 0;
 	background-color: var(--color-base);
 }
 
@@ -109,14 +137,15 @@ a:focus {
 }
 
 .header__heading {
+	font-family: 'Playfair Display';
 	font-size: var(--font-size-xl);
-	-webkit-text-stroke: 1px var(--color-highlight--1);
 }
 
 .header__subheading {
 	display: flex;
 	flex-direction: column;
 	font-size: 1.25rem;
+	font-family: 'Quicksand';
 }
 
 .header__subheading p {
@@ -126,52 +155,6 @@ a:focus {
 .header__homelink {
 	display: block;
 	text-decoration: none;
-}
-
-.header__navigation {
-	position: relative;
-	transform: rotate(5deg);
-}
-
-.ribbon {
-	width: 1em;
-	height: 4em;
-}
-
-.ribbon--1 {
-	z-index: 3;
-	left: 30%;
-	position: relative;
-	background-color: var(--color-highlight--4);
-	transform: skewY(11deg) rotate(-11deg);
-}
-
-.ribbon--2 {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	background-color: var(--color-highlight--1);
-	transform: skewY(-11deg) rotate(11deg);
-}
-
-.badge {
-	z-index: 2;
-	position: relative;
-	top: -.8em;
-	padding: .5em;
-	border: 1px solid var(--color-black);
-	border-radius: 5px;
-	width: 5em;
-	box-shadow: 0 0 2px var(--color-highlight--1), 0 0 4px var(--color-highlight--4);
-	background-color: var(--color-white);
-}
-
-.badge__hole {
-	border: 1px solid black;
-	border-radius: 5px;
-	margin: auto;
-	width: 2em;
-	height: 0.5em;
 }
 
 .navigation__list.list {
@@ -190,7 +173,7 @@ a:focus {
 }
 
 .navigation__link:hover, .about a:hover, .contact__link:hover {
-	background-image: linear-gradient(180deg, transparent 60%, var(--color-highlight--4) 0);
+	background-image: linear-gradient(180deg, transparent 60%, var(--color-highlight--2) 0);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	text-decoration: none;
@@ -202,7 +185,7 @@ a:focus {
 }
 
 .hero__headshot {
-	border: 1px solid var(--color-highlight--4);
+	border: 1px solid var(--color-black);
 	margin: 0 auto;
 	width: 100%;
 	max-width:calc(51.75rem / 2);
@@ -261,15 +244,16 @@ a:focus {
 }
 
 .about__heading, .contact__heading {
-	color: var(--color-highlight--3);
+	color: var(--color-highlight--1);
 }
 
-.about__heading::after, .contact__heading::after {
-	content: ".";
+.about, .contact {
+	background-color: var(--color-highlight--3);
 }
 
 .services {
-	background-color: var(--color-highlight--4);
+	color: var(--color-white);
+	background-color: var(--color-base);
 }
 
 .contact__address {
@@ -292,3 +276,19 @@ footer p, footer a {
 footer img {
 	vertical-align: middle;
 }
+
+h2, h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+}
+
+h3 {
+	font-weight: 700;
+}
+
+p, li {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 500;
+}
+
+
