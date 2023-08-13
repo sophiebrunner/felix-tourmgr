@@ -1,0 +1,53 @@
+/* Custom Styling for Bezirk Mittelfranken */
+
+.plyr .plyr__controls {
+    padding: 0;
+    background: var(--color-red);
+}
+
+.plyr .plyr__control {
+    background: var(--color-red);
+    cursor: default;
+    transition: unset;
+}
+
+.plyr .plyr__control:not(.plyr__control--overlaid) {
+    padding: var(--spacing--micro);
+    border-radius: 0;
+}
+
+.plyr .plyr__control.plyr__control--overlaid {
+    border: 2px solid var(--color-red);
+}
+
+.plyr.plyr--full-ui input[type=range]::-webkit-slider-runnable-track,
+.plyr.plyr--full-ui input[type=range]::-moz-range-track,
+.plyr.plyr--full-ui input[type=range]::-ms-track {
+    transition: none;
+}
+
+
+.plyr .plyr__control:hover,
+.plyr .plyr__control.plyr__tab-focus,
+.plyr .plyr__control:focus-visible,
+.plyr .plyr__control[aria-expanded=true] {
+    background: var(--color-white);
+
+    & svg {
+        fill: var(--color-red);
+    }
+}
+
+.plyr .plyr__tab-focus,
+.plyr .plyr__controls__item:focus,
+.plyr .plyr__control:focus-visible,
+.plyr .plyr__controls__item input:focus-visible {
+    outline: 2px solid var(--color-white);
+}
+
+.plyr--full-ui input[type=range]:focus-visible::-webkit-slider-runnable-track,
+.plyr--full-ui input[type=range]:focus-visible::-moz-range-track,
+.plyr--full-ui input[type=range]:focus-visible::-ms-track {
+    outline: 2px solid var(--color-white);
+    outline-offset: 2px;
+}

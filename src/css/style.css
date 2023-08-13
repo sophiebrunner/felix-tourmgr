@@ -6,9 +6,9 @@
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/playfair-display-v30-latin-700.woff2") format("woff2"),
+  src: url("../../public/fonts/playfair-display-v30-latin-700.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("./fonts/playfair-display-v30-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../../public/fonts/playfair-display-v30-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* playfair-display-900 - latin */
 @font-face {
@@ -16,9 +16,9 @@
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 900;
-  src: url("./fonts/playfair-display-v30-latin-900.woff2") format("woff2"),
+  src: url("../../public/fonts/playfair-display-v30-latin-900.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("./fonts/playfair-display-v30-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../../public/fonts/playfair-display-v30-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* quicksand-500 - latin */
@@ -27,9 +27,9 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
-  src: url("./fonts/quicksand-v30-latin-500.woff2") format("woff2"),
+  src: url("../../public/fonts/quicksand-v30-latin-500.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("./fonts/quicksand-v30-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../../public/fonts/quicksand-v30-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* quicksand-600 - latin */
 @font-face {
@@ -37,9 +37,9 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 600;
-  src: url("./fonts/quicksand-v30-latin-600.woff2") format("woff2"),
+  src: url("../../public/fonts/quicksand-v30-latin-600.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("./fonts/quicksand-v30-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../../public/fonts/quicksand-v30-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* General styling and custom properties */
