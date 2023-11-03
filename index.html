@@ -7,181 +7,327 @@
     <meta name="author" content="Sophie Brunner" />
     <meta
       name="description"
-      content="Portfolio website of the concert tour and cultural manager Felix Meischter"
+      content="Portfolio website of the tour and arts manager Felix Meischter"
     />
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>Felix Meischter | Tourmanager</title>
+    <link rel="stylesheet" href="dist/styles.min.css" />
+    <title>Felix Meischter | Tour Management | Arts Management</title>
   </head>
 
   <body>
-    <main>
-      <div class="wrapper">
-        <article id="hero-section" class="hero-section">
-          <img
-            src="assets/images/felix-meischter-c-helge-krückeberg.jpg"
-            alt="Headshot of Felix Meischter."
-            copyright="Helge Krückeberg"
-            class="hero-section__headshot"
-          />
-          <h1>Felix Meischter</h1>
-          <p class="hero-section__description hero-section__description--job">
-            Tourmanager
-          </p>
-          <p
-            class="hero-section__description hero-section__description--contact"
-          >
-            Get in touch
-          </p>
-          <div class="hero-section__flex-container">
-            <a href="mailto:felix@tourmanager.de">
-              <i class="hero-section__icon--mail" aria-hidden="true">@</i>
-              <span class="visually-hidden">E-Mail</span>
-            </a>
-            <a href="https://www.instagram.com/femei93/?hl=de">
-              <img
-                src="./assets/icons/Instagram Logo Pack/02 White Glyph/Instagram_Glyph_White.png"
-                alt="Instagram logo."
-                class="hero-section__icon"
-                id="icon--instagram"
-                aria-hidden="true"
-              />
-              <span class="visually-hidden">Instagram</span></a
-            >
-            <a href="https://www.linkedin.com/in/felixmeischter/">
-              <img
-                src="./assets/icons/LinkedIn-Logos 5/In/Digital/White/2x/In-White-128-Γäó@2x.png"
-                alt="LinkedIn logo."
-                class="hero-section__icon"
-                id="icon--linkedin"
-                aria-hidden="true"
-              />
-              <span class="visually-hidden">LinkedIn</span>
-            </a>
-          </div>
-        </article>
+    <header class="header">
+      <div>
+        <a href="/" class="header__homelink">
+          <h1 class="header__heading">Felix Meischter</h1>
+          <p class="header__subheading">Tour & Arts Management</p>
+        </a>
       </div>
+      <nav class="header__navigation">
+        <button class="header__button" id="menuButton" aria-expanded="false">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M5 7H19"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M5 12H19"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M5 17H19"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+            </g>
+          </svg>
+        </button>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M18 6L6 18"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M6 6L18 18"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <ul class="navigation__list list">
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link">About</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#services" class="navigation__link">Services</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <article id="intro" class="intro">
-        <h2 class="intro__header text--centered">Hello - nice to meet you.</h2>
-        <section class="intro__content">
-          <p class="intro__text">
-            I am Felix and I am passionate about concerts. When things get
-            hectic around me, I am at my best. Even with the best planning,
-            problems crop up at the last minute. Then I keep a cool head and
-            find a solution. So that in the end exactly what I burn for can take
-            place: the perfect live moment, the magic of music.
-          </p>
-          <div class="intro__flex-container">
-            <a href="#references" class="intro__button">References</a>
-            <a href="#resume" class="intro__button">Resume</a>
-          </div>
-        </section>
-      </article>
-
-      <article id="references" class="references">
-        <h2 class="references__header text--centered">References</h2>
-        <div class="references__grid-container">
-          <div class="references-card">
-            <header class="references-card__header">
-              <img
-                src="./assets/images/milow.jpg"
-                alt="Headshot of Milow."
-                class="references-card__img"
-              />
-              <h3>
-                <a
-                  href="http://milow.com/"
-                  class="references-card__header-link link"
-                  >Milow</a
-                >
-              </h3>
-            </header>
-            <ul class="references-card__list">
-              <li>
-                NICE TO MEET YOU LIVE TOUR (13. - 26.11.2022 // 05.04. -
-                16.05.2023)
-              </li>
-              <li>NICE TO MEET YOU SUMMER TOUR (05.05.2022 - 21.08.2022)</li>
-              <li>TV and radio shows (e. g. ARD, ZDF, FFH, 104.6 RTL)</li>
-            </ul>
-          </div>
-          <div class="references-card">
-            <header class="references-card__header">
-              <img
-                src="./assets/images/seabass-creatives-U3m4_cKbUfc-unsplash.jpeg"
-                alt="Headshot of Milow."
-                class="references-card__img"
-              />
-              <h3>You?</h3>
-            </header>
-            <ul class="references-card__list">
-              <li>Concert and tour management</li>
-              <li>Cultural events of any kind</li>
-              <li>Artist support</li>
-              <li>
-                Interested?
-                <a href="mailto:hey@felix.de">Send me a mail.</a>
-              </li>
-            </ul>
-          </div>
+    <main>
+      <section class="hero">
+        <div class="hero__headshot">
+          <img
+            src="dist/images/felix-meischter.jpg"
+            alt="Felix Meischter"
+            copyright="Arnout Bracke"
+          />
         </div>
-      </article>
-
-      <article id="resume" class="resume">
-        <h2 class="resume__header text--centered">About me</h2>
-        <section class="resume__experience">
-          <h3>Experience</h3>
-          <div class="resume__grid-container">
-            <p>2022</p>
-            <div>
-              <p>Tour management MILOW</p>
-              <p>Self-employed</p>
-            </div>
-            <p>2018 - 2022</p>
-            <div>
-              <p>Artistic Administation</p>
-              <p>NDR Radio Philharmonic</p>
-            </div>
-            <p>2022</p>
-            <div>
-              <p>Artistic Administation</p>
-              <p>NDR Radio Philharmonic</p>
-            </div>
-            <p>2022</p>
-            <div>
-              <p>Artistic Administation</p>
-              <p>NDR Radio Philharmonic</p>
-            </div>
-          </div>
-        </section>
-        <section class="resume__education">
-          <h3>Education</h3>
-          <div class="resume__grid-container">
-            <p>2018</p>
-            <div>
-              <p>Bachelor of Arts in Musicology and arts adiministration</p>
-              <p>University of Music Franz Liszt Weimar</p>
-            </div>
-          </div>
-        </section>
-        <section class="resume__languages">
-          <h3>Languages</h3>
-          <ul>
-            <li>English - Full professional proficiency</li>
-            <li>German - Native proficiency</li>
-            <li>French - Elementary proficiency</li>
+        <nav class="socials">
+          <ul class="socials__list list">
+            <li>
+              <a href="https://www.instagram.com/femei93/?hl=de">
+                <svg
+                  viewBox="0 0 23.998 24"
+                  focusable="false"
+                  width="23.998"
+                  height="24"
+                  class="Icon Icon--inline Icon--theme-default"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 5.848A6.142 6.142 0 005.848 12 6.144 6.144 0 0012 18.151 6.143 6.143 0 0018.152 12 6.14 6.14 0 0012 5.85zM12 16c-2.2 0-4-1.794-4-4A4.003 4.003 0 0112 8c2.207 0 4 1.793 4 4 0 2.205-1.799 4-4 4zm7.84-10.403c0 .8-.644 1.436-1.436 1.436a1.433 1.433 0 01-1.435-1.436 1.435 1.435 0 112.871 0zm4.075 1.456c-.092-1.923-.53-3.626-1.938-5.027C20.574.623 18.872.183 16.949.087c-1.98-.112-7.919-.112-9.901 0C5.131.18 3.429.617 2.021 2.02S.179 5.125.083 7.05c-.112 1.978-.112 7.918 0 9.9.092 1.922.53 3.623 1.938 5.026 1.409 1.402 3.105 1.842 5.027 1.938 1.982.11 7.92.11 9.901 0 1.922-.092 3.626-.53 5.028-1.938 1.401-1.403 1.841-3.104 1.938-5.027.112-1.983.112-7.916 0-9.897zm-2.561 12.021a4.045 4.045 0 01-2.281 2.28c-1.579.626-5.327.481-7.073.481-1.746 0-5.499.14-7.073-.482a4.056 4.056 0 01-2.282-2.279c-.626-1.58-.481-5.329-.481-7.074s-.139-5.499.481-7.074a4.05 4.05 0 012.282-2.279c1.58-.627 5.327-.48 7.073-.48 1.746 0 5.5-.14 7.073.48a4.05 4.05 0 012.281 2.28c.626 1.58.482 5.328.482 7.073s.146 5.5-.482 7.074z"
+                  ></path>
+                </svg>
+                <span class="visually-hidden"
+                  >Felix Meischter auf Instagram</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/felixmeischter/">
+                <svg
+                  viewBox="0 0 24 23.996"
+                  focusable="false"
+                  width="24"
+                  height="23.996"
+                  class="Icon Icon--inline Icon--theme-default"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5.373 23.996H.397V7.975h4.976zM2.882 5.789C1.291 5.789 0 4.473 0 2.883a2.882 2.882 0 115.763 0c.001 1.59-1.289 2.906-2.881 2.906zm21.113 18.207H19.03v-7.799c0-1.859-.037-4.242-2.587-4.242-2.587 0-2.983 2.02-2.983 4.107v7.934H8.49V7.975h4.772v2.187h.069c.664-1.259 2.287-2.586 4.708-2.586 5.034 0 5.961 3.313 5.961 7.62v8.8z"
+                  ></path>
+                </svg>
+                <span class="visually-hidden"
+                  >Felix Meischter auf LinkedIn</span
+                >
+              </a>
+            </li>
           </ul>
-        </section>
-      </article>
+        </nav>
+      </section>
+
+      <section class="about" id="about">
+        <h2 class="about__heading">About</h2>
+        <p class="about__description">
+          Moin, I'm Felix. Nice to meet you. I'm a freelance tour and arts
+          manager from Hanover and Hamburg, Germany.
+        </p>
+        <p class="about__description">
+          One of my current clients is Belgian Singer-Songwriter
+          <a href="http://milow.com/">MILOW</a>. I accompany him to all his tour
+          dates as well as radio and television appearances.
+        </p>
+        <p class="about__description">
+          Before I started my own business I worked in the administration of the
+          <a
+            href="https://www.ndr.de/orchester_chor/radiophilharmonie/index.html"
+            >NDR&nbsp;Radiophilharmonie</a
+          >
+          in Hanover, Germany. My responsibilities were all internal and
+          external communication to agencies, festivals and promoters, artist
+          assistance and support as well as video and social media content.
+        </p>
+        <p class="about__description">
+          Already before and during my studies in Musicology and Arts Management
+          at the University of Music
+          <span style="font-variant: small-caps">Franz Liszt</span> Weimar I was
+          able to gain professional experience as project and tour manager for
+          several choirs I was singing with. Furthermore,
+          <a href="https://www.kunstfest-weimar.de/index.php?id=156"
+            >Kunstfest Weimar</a
+          >
+          and
+          <a href="https://kunstfestspiele.de/en/"
+            >Kunstfestspiele Herrenhausen</a
+          >
+          asked me to take responsibility for differenct projects in several
+          festival seasons.
+        </p>
+        <div>
+          <a href="" class="cta">Contact me</a>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <h2 class="services__heading">How can I help you?</h2>
+        <h3 class="services__heading">Tour Management</h3>
+        <p>
+          Advancing and accompaniment of all kinds of concerts and tours for
+          artists, bands, orchestras and choirs.
+        </p>
+        <ul class="services__list">
+          <li>
+            Accompaniment of all tour dates
+            <ul>
+              <li>Festival/tour shows</li>
+              <li>Radio and TV promotion</li>
+              <li>Class B driver's licence</li>
+            </ul>
+          </li>
+          <li class="services__item">
+            Advancing of all show related details
+            <ul>
+              <li>Technical arrangements</li>
+              <li>Travel and hotel arrangements</li>
+              <li>Technical and hospitality riders</li>
+            </ul>
+          </li>
+          <li class="services__item">Stage management</li>
+          <li>
+            Tour finances
+            <ul>
+              <li>Budgeting</li>
+              <li>Settling of shows</li>
+            </ul>
+          </li>
+          <li class="services__item">
+            Merchandise sales
+            <ul>
+              <li>Order placement</li>
+              <li>Inventory</li>
+              <li>Reordering of items</li>
+              <li>On-site sales</li>
+            </ul>
+          </li>
+        </ul>
+        <h3 class="services__heading">Arts Administration</h3>
+        <p>
+          Planning and implementation of cultural projects and events such as
+          theatre performances, concerts, festivals (also in the public space),
+          music competitions, masterclasses etc.
+        </p>
+        <ul class="services__list">
+          <li class="services__item">Concept development</li>
+          <li class="services__item">
+            Financials
+            <ul>
+              <li>Funding</li>
+              <li>Budgeting</li>
+              <li>Controlling</li>
+              <li>Settlement</li>
+            </ul>
+          </li>
+          <li class="services__item">
+            Project management
+            <ul>
+              <li>Planning according to legal requirements</li>
+              <li>Contract management</li>
+              <li>Scheduling</li>
+              <li>Implementation considering the local conditions</li>
+              <li>Communication with all internal and external partners</li>
+              <li>Hotel and travel arrangements</li>
+              <li>Transport of people and material</li>
+              <li>Assistance and support for all participants</li>
+            </ul>
+          </li>
+          <li>Calling of shows</li>
+          <li>Read music</li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="contact__heading">Contact me</h2>
+        <address class="contact__address">
+          <svg
+            fill="#000000"
+            viewBox="0 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>paper-plane</title>
+              <path
+                d="M31.117 1.445c-0.009-0.018-0.026-0.029-0.036-0.046-0.069-0.131-0.155-0.243-0.258-0.338l-0.001-0.001c-0.028-0.019-0.063-0.039-0.098-0.057l-0.007-0.003c-0.021-0.015-0.029-0.043-0.052-0.057-0.030-0.019-0.067-0.013-0.099-0.030-0.131-0.071-0.285-0.12-0.448-0.136l-0.005-0c-0.035-0.007-0.079-0.013-0.123-0.016l-0.004-0c-0.211 0.001-0.409 0.055-0.582 0.15l0.006-0.003c-0.010 0.005-0.022 0.002-0.032 0.008l-27.999 16c-0.379 0.219-0.63 0.623-0.63 1.085 0 0.5 0.294 0.932 0.719 1.132l0.008 0.003 9.273 4.28v6.585c0 0.473 0.263 0.884 0.65 1.096l0.007 0.003c0.172 0.095 0.376 0.15 0.594 0.15 0.255 0 0.492-0.077 0.69-0.208l-0.005 0.003 6.027-3.955 8.764 4.045c0.153 0.072 0.333 0.115 0.523 0.115 0.659 0 1.198-0.509 1.246-1.156l0-0.004 2-28.001c0.002-0.023-0.013-0.042-0.013-0.065 0.001-0.016 0.001-0.035 0.001-0.054 0-0.191-0.043-0.372-0.121-0.533l0.003 0.007zM24.16 6.777l-12.511 14.3-6.922-3.195zM13.25 27.686v-3.117l2.788 1.287zM26.883 28.107l-7.663-3.537c-0.026-0.014-0.038-0.042-0.065-0.055l-5.115-2.373 14.448-16.514z"
+              ></path>
+            </g>
+          </svg>
+          <a class="contact__link" href="mailto:felix@tourmgr.com"
+            >felix@tourmgr.com</a
+          >
+        </address>
+        <p class="contact__languages">
+          You can talk to me in English, German or French. I'm also always
+          interested in new languages, so feel free to contact me!
+        </p>
+      </section>
     </main>
 
     <footer>
-      <ul>
-        <li><a href="#">Datenschutz</a></li>
-        <li><a href="#">Impressum</a></li>
-      </ul>
+      <p>
+        <span>Made with</span>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+              fill="#9d3a3f"
+            ></path>
+          </g>
+        </svg>
+        <span>by</span>
+        <a href="https://sophiebrunner.com">Sophie Brunner</a>
+      </p>
+      <nav class="footer__navigation">
+        <ul class="list">
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </nav>
     </footer>
 
-    <script src="assets/script.js"></script>
+    <script src="dist/app.min.js"></script>
   </body>
 </html>
