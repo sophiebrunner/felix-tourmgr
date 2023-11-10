@@ -107,7 +107,7 @@ a {
   transition: background-size 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
-a:hover {
+a:not(:has(svg)):hover {
   background-image: linear-gradient(
     180deg,
     transparent 60%,
@@ -129,93 +129,6 @@ a:focus {
   background-color: var(--color-highlight--dark);
 }
 
-svg {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-
-  background-color: var(--color-base);
-}
-
-.header__heading,
-.header__subheading {
-  margin: 0;
-  color: var(--color-white);
-}
-
-.header__heading {
-  font-size: var(--font-size-lg);
-}
-
-.header__subheading {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  font-family: "Quicksand";
-}
-
-.header__homelink {
-  text-decoration: none;
-}
-
-.header__button {
-  border: none;
-  background-color: transparent;
-}
-
-.header__button svg {
-  transform: translateX(-180deg);
-  fill: var(--color-white);
-  width: 24px;
-  height: 24px;
-}
-
-.navigation__list.list {
-  position: absolute;
-  top: 5rem;
-  left: 0;
-
-  display: none;
-  width: 100%;
-
-  background-color: var(--color-highlight--dark);
-}
-
-.header__button[aria-expanded="true"] ~ .navigation__list.list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  padding-block: 0.5rem;
-}
-
-.hero {
-  background-color: var(--color-base);
-}
-
-.hero__headshot {
-  border: 1px solid var(--color-black);
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-}
-
-.hero__headshot img {
-  width: 100%;
-  height: 100%;
-}
-
-.hero__description {
-  color: var(--color-white);
-  font-size: 1.25rem;
-}
-
 .visually-hidden {
   position: absolute !important;
   overflow: hidden !important;
@@ -233,50 +146,118 @@ svg {
   list-style-type: none;
 }
 
-.socials__list.list {
+svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+#header {
+  background-color: var(--color-base);
+}
+
+h1,
+h1 + p {
+  margin: 0;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+}
+
+h1 + p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-family: "Quicksand";
+}
+
+[href="/"] {
+  text-decoration: none;
+}
+
+[aria-label="Hauptnavigation"] {
+  margin-top: 1rem;
+}
+
+[aria-label="Hauptnavigation"] ul.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+[aria-label="Hauptnavigation"] ul.list span[aria-hidden="true"] {
+  color: var(--color-white);
+}
+
+[aria-label="Hauptnavigation"] ul.list li a {
+  color: var(--color-white);
+  text-underline-offset: 3px;
+}
+
+.navigation__link:focus {
+  outline: 2px solid var(--color-white);
+}
+
+#hero {
+  padding-top: 0;
+  background-color: var(--color-base);
+}
+
+#hero > div {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+#hero > div + [aria-label="Soziale Medien"] {
+  margin-top: 1.5rem;
+}
+
+[alt="Portrait Felix Meischter"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+[aria-label="Soziale Medien"] ul.list {
   display: flex;
   gap: 1rem;
 }
 
-.socials__list.list a {
+[aria-label="Soziale Medien"] ul.list a {
   text-decoration: none;
 }
 
-.socials__list.list a img {
-  transition: transform 0.1s;
-}
-
-.socials__list.list a:hover img {
-  transform: scale(120%);
-}
-
-.socials__icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
+[aria-label="Soziale Medien"] ul.list a svg {
+  width: 32px;
+  height: 32px;
   fill: var(--color-white);
 }
 
-.about__heading,
+[aria-label="Soziale Medien"] ul.list a:hover svg {
+  transform: scale(120%);
+}
+
+#about h2,
 .contact__heading {
   color: var(--color-highlight--1);
 }
 
-.about,
-.contact {
+#about,
+#contact {
   background-color: var(--color-highlight--light);
 }
 
-.services {
+#services {
   color: var(--color-white);
   background-color: var(--color-base);
 }
 
-.contact__address {
+#contact address {
   font-style: normal;
 }
 
-.contact__icon {
+#contact svg {
   width: var(--font-size--reg);
   vertical-align: middle;
 }

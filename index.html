@@ -14,97 +14,41 @@
   </head>
 
   <body>
-    <header class="header">
+    <header id="header">
       <div>
-        <a href="/" class="header__homelink">
-          <h1 class="header__heading">Felix Meischter</h1>
-          <p class="header__subheading">Tour & Arts Management</p>
+        <a href="/">
+          <h1>Felix Meischter</h1>
+          <p>Tour & Arts Management</p>
         </a>
       </div>
-      <nav class="header__navigation">
-        <button class="header__button" id="menuButton" aria-expanded="false">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M5 7H19"
-                stroke="#FFFFFF"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <path
-                d="M5 12H19"
-                stroke="#FFFFFF"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-              <path
-                d="M5 17H19"
-                stroke="#FFFFFF"
-                stroke-width="2"
-                stroke-linecap="round"
-              ></path>
-            </g>
-          </svg>
-        </button>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M18 6L6 18"
-              stroke="#FFFFFF"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M6 6L18 18"
-              stroke="#FFFFFF"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </g>
-        </svg>
-        <ul class="navigation__list list">
-          <li class="navigation__item">
-            <a href="#about" class="navigation__link">About</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="list">
+          <li>
+            <a href="#about">About</a>
           </li>
-          <li class="navigation__item">
-            <a href="#services" class="navigation__link">Services</a>
+          <span aria-hidden="true">|</span>
+          <li>
+            <a href="#services">Services</a>
           </li>
-          <li class="navigation__item">
-            <a href="#contact" class="navigation__link">Contact</a>
+          <span aria-hidden="true">|</span>
+          <li>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero__headshot">
+      <section id="hero">
+        <div>
           <img
             src="dist/images/felix-meischter.jpg"
-            alt="Felix Meischter"
+            alt="Portrait Felix Meischter"
             copyright="Arnout Bracke"
           />
         </div>
-        <nav class="socials">
-          <ul class="socials__list list">
+        <nav aria-label="Soziale Medien">
+          <ul class="list">
             <li>
               <a href="https://www.instagram.com/femei93/?hl=de">
                 <svg
@@ -147,18 +91,18 @@
         </nav>
       </section>
 
-      <section class="about" id="about">
-        <h2 class="about__heading">About</h2>
-        <p class="about__description">
+      <section id="about">
+        <h2>About</h2>
+        <p>
           Moin, I'm Felix. Nice to meet you. I'm a freelance tour and arts
           manager from Hanover and Hamburg, Germany.
         </p>
-        <p class="about__description">
+        <p>
           One of my current clients is Belgian Singer-Songwriter
           <a href="http://milow.com/">MILOW</a>. I accompany him to all his tour
           dates as well as radio and television appearances.
         </p>
-        <p class="about__description">
+        <p>
           Before I started my own business I worked in the administration of the
           <a
             href="https://www.ndr.de/orchester_chor/radiophilharmonie/index.html"
@@ -168,7 +112,7 @@
           external communication to agencies, festivals and promoters, artist
           assistance and support as well as video and social media content.
         </p>
-        <p class="about__description">
+        <p>
           Already before and during my studies in Musicology and Arts Management
           at the University of Music
           <span style="font-variant: small-caps">Franz Liszt</span> Weimar I was
@@ -185,18 +129,18 @@
           festival seasons.
         </p>
         <div>
-          <a href="" class="cta">Contact me</a>
+          <a href="">Contact me</a>
         </div>
       </section>
 
-      <section class="services" id="services">
-        <h2 class="services__heading">How can I help you?</h2>
-        <h3 class="services__heading">Tour Management</h3>
+      <section id="services">
+        <h2>How can I help you?</h2>
+        <h3>Tour Management</h3>
         <p>
           Advancing and accompaniment of all kinds of concerts and tours for
           artists, bands, orchestras and choirs.
         </p>
-        <ul class="services__list">
+        <ul>
           <li>
             Accompaniment of all tour dates
             <ul>
@@ -205,7 +149,7 @@
               <li>Class B driver's licence</li>
             </ul>
           </li>
-          <li class="services__item">
+          <li>
             Advancing of all show related details
             <ul>
               <li>Technical arrangements</li>
@@ -213,7 +157,7 @@
               <li>Technical and hospitality riders</li>
             </ul>
           </li>
-          <li class="services__item">Stage management</li>
+          <li>Stage management</li>
           <li>
             Tour finances
             <ul>
@@ -221,7 +165,7 @@
               <li>Settling of shows</li>
             </ul>
           </li>
-          <li class="services__item">
+          <li>
             Merchandise sales
             <ul>
               <li>Order placement</li>
@@ -231,15 +175,15 @@
             </ul>
           </li>
         </ul>
-        <h3 class="services__heading">Arts Administration</h3>
+        <h3>Arts Administration</h3>
         <p>
           Planning and implementation of cultural projects and events such as
           theatre performances, concerts, festivals (also in the public space),
           music competitions, masterclasses etc.
         </p>
-        <ul class="services__list">
-          <li class="services__item">Concept development</li>
-          <li class="services__item">
+        <ul>
+          <li>Concept development</li>
+          <li>
             Financials
             <ul>
               <li>Funding</li>
@@ -248,7 +192,7 @@
               <li>Settlement</li>
             </ul>
           </li>
-          <li class="services__item">
+          <li>
             Project management
             <ul>
               <li>Planning according to legal requirements</li>
@@ -266,9 +210,9 @@
         </ul>
       </section>
 
-      <section class="contact" id="contact">
-        <h2 class="contact__heading">Contact me</h2>
-        <address class="contact__address">
+      <section id="contact">
+        <h2>Contact me</h2>
+        <address>
           <svg
             fill="#000000"
             viewBox="0 0 32 32"
@@ -289,11 +233,9 @@
               ></path>
             </g>
           </svg>
-          <a class="contact__link" href="mailto:felix@tourmgr.com"
-            >felix@tourmgr.com</a
-          >
+          <a href="mailto:felix@tourmgr.com">felix@tourmgr.com</a>
         </address>
-        <p class="contact__languages">
+        <p>
           You can talk to me in English, German or French. I'm also always
           interested in new languages, so feel free to contact me!
         </p>
@@ -320,12 +262,13 @@
         <span>by</span>
         <a href="https://sophiebrunner.com">Sophie Brunner</a>
       </p>
-      <nav class="footer__navigation">
+      <nav aria-label="Rechtliches">
         <ul class="list">
           <li><a href="#">Impressum</a></li>
           <li><a href="#">Datenschutz</a></li>
         </ul>
       </nav>
+      <a href="#top">Back to top</a>
     </footer>
 
     <script src="dist/app.min.js"></script>
