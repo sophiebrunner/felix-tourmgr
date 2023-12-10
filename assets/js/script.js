@@ -1,14 +1,19 @@
-const menuButton = document.querySelector("#menuButton");
+const navLinks = document.querySelectorAll(
+  "nav[aria-label='Main navigation'] .list li a"
+);
 
-function toggleButton() {
-  if (menuButton.getAttribute("aria-expanded") === "false") {
-    menuButton.setAttribute("aria-expanded", "true");
-  } else {
-    menuButton.setAttribute("aria-expanded", "false");
-  }
+navLinks.forEach((navlink) => {
+  navlink.addEventListener("click", tagCurrentNavlink);
+});
+
+function tagCurrentNavlink(e) {
+  navLinks.forEach((navlink) => {
+    if (navlink.getAttribute("aria-current")) {
+      navlink.removeAttribute("aria-current");
+    }
+  });
+  e.target.setAttribute("aria-current", "page");
 }
-
-menuButton.addEventListener("click", toggleButton);
 
 /* global Plyr */
 (function iife(w, d) {

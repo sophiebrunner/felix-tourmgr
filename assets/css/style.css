@@ -107,7 +107,7 @@ h3 {
   font-weight: 700;
 }
 
-a:not([href="/"]) {
+a {
   color: var(--color-base);
   font-weight: 600;
   background: linear-gradient(to right, #0d51609d, #0d51609d),
@@ -125,38 +125,15 @@ a:not([href="/"]) {
   text-decoration: none;
 }
 
-[aria-label="Main navigation"] a {
-  background: linear-gradient(to right, var(--color-white), var(--color-white)),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-    );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-
-  text-decoration: none;
-
-  font-size: calc(1.25rem + 0.5vw);
-}
-
-[aria-label="Main navigation"] a:hover {
-  background-size: 0 3px, 100% 3px;
-}
-
-a:not(:has(svg)):hover {
+a:hover {
   background-size: 0 5px, 100% 5px;
 }
 
 a:focus {
-  box-shadow: 20px 15px 10px rgba(255, 0, 0, 1),
-    -20px 15px 10px rgba(255, 0, 180, 1), -20px -15px 10px rgba(0, 100, 200, 1);
-  outline: none;
-  text-decoration: none;
-  background: unset;
+  outline: 5px solid var(--color-highlight);
+  outline-offset: 2px;
+  text-decoration: none !important;
+  background: unset !important;
 }
 
 ::selection {
@@ -207,22 +184,19 @@ h1 + p {
   font-family: "Quicksand";
 }
 
-[href="/"] {
-  display: block;
-  text-decoration: none;
-}
-
-[href="/"]:focus {
-  outline: 3px solid var(--color-highlight);
-}
-
 [aria-label="Main navigation"] {
   margin-top: calc(1rem + 1.5vw);
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   [aria-label="Main navigation"] ul.list {
-    justify-content: space-between;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 400px) {
+  [aria-label="Main navigation"] ul.list {
+    gap: 2rem;
   }
 }
 
@@ -230,7 +204,6 @@ h1 + p {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -240,11 +213,25 @@ h1 + p {
 
 [aria-label="Main navigation"] ul.list li a {
   color: var(--color-white);
-  text-underline-offset: 3px;
+  background: linear-gradient(to right, var(--color-white), var(--color-white)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+  text-decoration: none;
+
+  font-size: calc(1.25rem + 0.5vw);
 }
 
-.navigation__link:focus {
-  outline: 2px solid var(--color-white);
+[aria-label="Main navigation"] ul.list li a:hover {
+  background-size: 0 3px, 100% 3px;
 }
 
 #hero {
@@ -259,7 +246,7 @@ h1 + p {
   height: 100%;
 
   background-color: var(--color-white);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 12px rgba(0, 0, 0, 0.847);
 }
 
 #hero > figure > figcaption {
