@@ -1,0 +1,368 @@
+/* Fonts */
+
+/* playfair-display-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/playfair-display-v30-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/playfair-display-v30-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* playfair-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/playfair-display-v30-latin-900.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/playfair-display-v30-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* quicksand-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/quicksand-v30-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/quicksand-v30-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* quicksand-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/quicksand-v30-latin-600.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/quicksand-v30-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* give-you-glory-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Give You Glory";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/give-you-glory-v15-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/give-you-glory-v15-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* General styling and custom properties */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-base: #1e2130;
+  --color-highlight: #ff6b6b;
+  --color-highlight--dark: #0d5160;
+  --color-highlight--light: #e1eaec;
+  --font-size--reg: 1rem;
+  --font-size-med: 1.5rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 3rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  font-size: calc(var(--font-size--reg) + 0.390625vw);
+}
+
+header,
+footer,
+section {
+  padding: 1.5rem 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+a:not([href="/"]) {
+  color: var(--color-base);
+  font-weight: 600;
+  background: linear-gradient(to right, #0d51609d, #0d51609d),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 5px, 0 5px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+  text-decoration: none;
+}
+
+[aria-label="Main navigation"] a {
+  background: linear-gradient(to right, var(--color-white), var(--color-white)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+  text-decoration: none;
+
+  font-size: calc(1.25rem + 0.5vw);
+}
+
+[aria-label="Main navigation"] a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+a:not(:has(svg)):hover {
+  background-size: 0 5px, 100% 5px;
+}
+
+a:focus {
+  box-shadow: 20px 15px 10px rgba(255, 0, 0, 1),
+    -20px 15px 10px rgba(255, 0, 180, 1), -20px -15px 10px rgba(0, 100, 200, 1);
+  outline: none;
+  text-decoration: none;
+  background: unset;
+}
+
+::selection {
+  color: var(--color-white);
+  background-color: var(--color-highlight);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  width: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+#header {
+  background-color: var(--color-base);
+}
+
+h1,
+h1 + p {
+  margin: 0;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+}
+
+h1 + p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-family: "Quicksand";
+}
+
+[href="/"] {
+  display: block;
+  text-decoration: none;
+}
+
+[href="/"]:focus {
+  outline: 3px solid var(--color-highlight);
+}
+
+[aria-label="Main navigation"] {
+  margin-top: calc(1rem + 1.5vw);
+}
+
+@media (max-width: 360px) {
+  [aria-label="Main navigation"] ul.list {
+    justify-content: space-between;
+  }
+}
+
+[aria-label="Main navigation"] ul.list {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+[aria-label="Main navigation"] ul.list span[aria-hidden="true"] {
+  color: var(--color-white);
+}
+
+[aria-label="Main navigation"] ul.list li a {
+  color: var(--color-white);
+  text-underline-offset: 3px;
+}
+
+.navigation__link:focus {
+  outline: 2px solid var(--color-white);
+}
+
+#hero {
+  padding-top: 0;
+  background-color: var(--color-base);
+}
+
+#hero > figure {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#hero > figure > figcaption {
+  padding-top: 1rem;
+
+  font-family: "Give you Glory", serif;
+  font-size: var(--font-size-med);
+  text-align: center;
+
+  transform: rotate(-10deg);
+}
+
+#hero > figure + [aria-label="Social media profiles"] {
+  margin-top: 1.5rem;
+}
+
+[alt="Portrait Felix Meischter"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+[aria-label="Social media profiles"] ul.list {
+  display: flex;
+  gap: 1rem;
+}
+
+[aria-label="Social media profiles"] ul.list a {
+  text-decoration: none;
+}
+
+[aria-label="Social media profiles"] ul.list a svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-white);
+  transition: transform 0.3s ease-in-out;
+}
+
+[aria-label="Social media profiles"] ul.list a:hover svg {
+  transform: scale(120%);
+}
+
+#about h2,
+.contact__heading {
+  color: var(--color-highlight--1);
+}
+
+#about,
+#contact {
+  background-color: var(--color-highlight--light);
+}
+
+#about div a[href="#contact"] {
+  border: 3px solid var(--color-highlight--dark);
+}
+
+#services {
+  color: var(--color-white);
+  background-color: var(--color-base);
+}
+
+#services ul {
+  padding-left: 1rem;
+}
+
+#services ul li + li,
+#services ul li > ul {
+  margin-top: 0.5rem;
+}
+
+#contact address {
+  font-style: normal;
+}
+
+div a[href="#contact"] {
+  font-family: "Playfair Display", serif;
+}
+
+#contact svg {
+  width: var(--font-size--reg);
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #1e2130;
+}
+
+footer div {
+  display: flex;
+}
+
+footer p,
+footer a {
+  color: var(--color-white);
+}
+
+footer img {
+  vertical-align: middle;
+}
+
+@media (min-width: 680px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

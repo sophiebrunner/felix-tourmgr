@@ -9,7 +9,7 @@
       name="description"
       content="Portfolio website of the tour and arts manager Felix Meischter"
     />
-    <link rel="stylesheet" href="dist/styles.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Felix Meischter | Tour Management | Arts Management</title>
   </head>
 
@@ -21,16 +21,14 @@
           <p>Tour & Arts Management</p>
         </a>
       </div>
-      <nav aria-label="Hauptnavigation">
+      <nav aria-label="Main navigation">
         <ul class="list">
           <li>
             <a href="#about">About</a>
           </li>
-          <span aria-hidden="true">|</span>
           <li>
             <a href="#services">Services</a>
           </li>
-          <span aria-hidden="true">|</span>
           <li>
             <a href="#contact">Contact</a>
           </li>
@@ -40,14 +38,14 @@
 
     <main>
       <section id="hero">
-        <div>
+        <figure>
           <img
-            src="dist/images/felix-meischter.jpg"
+            src="assets/images/felix-meischter.jpg"
             alt="Portrait Felix Meischter"
-            copyright="Arnout Bracke"
           />
-        </div>
-        <nav aria-label="Soziale Medien">
+          <figcaption>Backstage</figcaption>
+        </figure>
+        <nav aria-label="Social media profiles">
           <ul class="list">
             <li>
               <a href="https://www.instagram.com/femei93/?hl=de">
@@ -129,7 +127,7 @@
           festival seasons.
         </p>
         <div>
-          <a href="">Contact me</a>
+          <a href="#contact">Contact me</a>
         </div>
       </section>
 
@@ -262,15 +260,40 @@
         <span>by</span>
         <a href="https://sophiebrunner.com">Sophie Brunner</a>
       </p>
-      <nav aria-label="Rechtliches">
-        <ul class="list">
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Datenschutz</a></li>
-        </ul>
-      </nav>
-      <a href="#top">Back to top</a>
+      <div>
+        <nav aria-label="Legal info">
+          <ul class="list">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+          </ul>
+        </nav>
+        <a href="#top">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M15 11L12 8M12 8L9 11M12 8V16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          <span class="visually-hidden">Back to top</span></a
+        >
+      </div>
     </footer>
 
-    <script src="dist/app.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
