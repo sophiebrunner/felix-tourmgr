@@ -107,7 +107,7 @@ h3 {
   font-weight: 700;
 }
 
-a {
+a:not(:has(svg)) {
   color: var(--color-base);
   font-weight: 600;
   background: linear-gradient(to right, #0d51609d, #0d51609d),
@@ -117,7 +117,7 @@ a {
       rgba(255, 0, 180, 1),
       rgba(0, 100, 200, 1)
     );
-  background-size: 100% 5px, 0 5px;
+  background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
@@ -125,8 +125,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  background-size: 0 5px, 100% 5px;
+a:not(:has(svg)):hover {
+  background-size: 0 3px, 100% 3px;
 }
 
 a:focus {
@@ -175,12 +175,12 @@ h1 + p {
 }
 
 h1 {
-  font-size: var(--font-size-lg);
+  font-size: calc(var(--font-size-lg) + 0.390625vw);
 }
 
 h1 + p {
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: calc(1.25rem + 0.390625vw);
   font-family: "Quicksand";
 }
 
@@ -211,7 +211,8 @@ h1 + p {
   color: var(--color-white);
 }
 
-[aria-label="Main navigation"] ul.list li a {
+[aria-label="Main navigation"] ul.list li a,
+footer a:not([href="#top"]) {
   color: var(--color-white);
   background: linear-gradient(to right, var(--color-white), var(--color-white)),
     linear-gradient(
@@ -226,11 +227,14 @@ h1 + p {
   transition: background-size 400ms;
 
   text-decoration: none;
-
-  font-size: calc(1.25rem + 0.5vw);
 }
 
-[aria-label="Main navigation"] ul.list li a:hover {
+[aria-label="Main navigation"] ul.list li a {
+  font-size: calc(1.25rem + 0.390625vw);
+}
+
+[aria-label="Main navigation"] ul.list li a:hover,
+footer a:not([href="#top"]):hover {
   background-size: 0 3px, 100% 3px;
 }
 
@@ -246,7 +250,8 @@ h1 + p {
   height: 100%;
 
   background-color: var(--color-white);
-  box-shadow: 8px 12px rgba(0, 0, 0, 0.847);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 #hero > figure > figcaption {
@@ -279,13 +284,18 @@ h1 + p {
 }
 
 [aria-label="Social media profiles"] ul.list a svg {
-  width: 32px;
-  height: 32px;
   fill: var(--color-white);
+}
+
+[aria-label="Social media profiles"] ul.list a svg,
+a[href="#top"]:hover svg {
+  width: 44px;
+  height: 44px;
   transition: transform 0.3s ease-in-out;
 }
 
-[aria-label="Social media profiles"] ul.list a:hover svg {
+[aria-label="Social media profiles"] ul.list a:hover svg,
+a[href="#top"]:hover svg {
   transform: scale(120%);
 }
 
@@ -299,8 +309,23 @@ h1 + p {
   background-color: var(--color-highlight--light);
 }
 
+#about div {
+  margin-block: 2rem;
+}
+
 #about div a[href="#contact"] {
-  border: 3px solid var(--color-highlight--dark);
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid var(--color-base);
+  box-shadow: 4px 4px var(--color-highlight--dark);
+  background: unset;
+}
+
+#about div a[href="#contact"]:hover,
+#about div a[href="#contact"]:focus {
+  box-shadow: unset;
+  transform: translate(4px, 4px);
 }
 
 #services {
@@ -334,10 +359,6 @@ footer {
   background-color: #1e2130;
 }
 
-footer div {
-  display: flex;
-}
-
 footer p,
 footer a {
   color: var(--color-white);
@@ -345,6 +366,26 @@ footer a {
 
 footer img {
   vertical-align: middle;
+}
+
+nav[aria-label="Legal info"] .list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+a[href="#top"] {
+  position: relative;
+  left: 50%;
+  display: inline-block;
+  margin-block: 1rem;
+  transform: translateX(-50%);
+}
+
+a[href="#top"] svg {
+  width: 44px;
+  height: 44px;
 }
 
 @media (min-width: 680px) {
