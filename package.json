@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sophiebrunner/felix-tourmgr/issues"
   },
-  "homepage": "https://tourmgr.com"
+  "homepage": "https://tourmgr.com",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
