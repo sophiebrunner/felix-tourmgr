@@ -1,0 +1,237 @@
+#header {
+  background-color: var(--color-base);
+}
+
+[aria-label="Main navigation"] {
+  margin-top: var(--space-m);
+}
+
+[aria-label="Main navigation"] ul.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+  border-block: 2px solid var(--color-white);
+  margin: 0 auto;
+}
+
+@media (max-width: 399.98px) {
+  [aria-label="Main navigation"] ul.list {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 400px) {
+  [aria-label="Main navigation"] ul.list {
+    gap: 2rem;
+  }
+}
+
+[aria-label="Main navigation"] ul.list li a,
+footer a:not([href="#top"]) {
+  color: var(--color-white);
+  background: linear-gradient(to right, var(--color-white), var(--color-white)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+  text-decoration: none;
+}
+
+[aria-label="Main navigation"] ul.list li a {
+  font-size: var(--step-1);
+}
+
+[aria-label="Main navigation"] ul.list li a:hover,
+footer a:not([href="#top"]):hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+#hero {
+  padding-top: 0;
+  background-color: var(--color-base);
+}
+
+#hero > div {
+  padding: 1.2rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#hero > div + [aria-label="Social media profiles"] {
+  margin-top: 1.5rem;
+}
+
+#about h2,
+.contact__heading {
+  color: var(--color-highlight--1);
+}
+
+#about,
+#contact {
+  background-color: var(--color-highlight--light);
+}
+
+#about div {
+  margin-top: var(--space-l);
+}
+
+#about div a[href="#contact"] {
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid var(--color-base);
+  box-shadow: 4px 4px var(--color-highlight--dark);
+  background: unset;
+}
+
+#about div a[href="#contact"]:hover,
+#about div a[href="#contact"]:focus {
+  box-shadow: unset;
+  transform: translate(4px, 4px);
+}
+
+#services {
+  color: var(--color-white);
+  background-color: var(--color-base);
+}
+
+#services ul.list + h3 {
+  margin-top: var(--space-l);
+}
+
+#services p {
+  margin-bottom: 0;
+}
+
+#services ul.list > li {
+  border-bottom: 2px solid var(--color-highlight--light);
+  padding: 1rem 0;
+}
+
+.trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  padding: 0;
+  border: none;
+
+  color: inherit;
+  background-color: transparent;
+  font: inherit;
+  text-align: start;
+}
+
+.trigger:focus {
+  outline: 3pc solid var(--color-highlight);
+  outline-offset: 3px;
+}
+
+.trigger span {
+  flex-shrink: 1;
+  font-weight: 600;
+}
+
+.trigger svg {
+  flex-shrink: 0;
+  width: 1rem;
+  height: auto;
+  color: inherit;
+  fill: currentColor;
+}
+
+/* when the trigger is "expanded", rotate the icon to visually indicate state */
+.trigger[aria-expanded="true"] svg {
+  transform: rotate(-180deg);
+}
+
+.panel ul {
+  padding-left: 1.25rem;
+  margin-top: var(--space-xss);
+  list-style-image: url("../icons/check-solid.svg");
+}
+
+.panel ul li::marker {
+  font-size: var(--step-1);
+  color: currentColor;
+}
+
+#contact address,
+#contact nav[aria-label="Social media profiles"] li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--space-2xs);
+  font-style: normal;
+}
+
+#contact svg {
+  width: var(--step-0);
+  vertical-align: middle;
+}
+
+#contact p {
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: #1e2130;
+}
+
+footer p,
+footer a {
+  color: var(--color-white);
+}
+
+footer p {
+  text-align: center;
+}
+
+footer svg {
+  display: inline;
+  vertical-align: middle;
+}
+
+nav[aria-label="Legal info"] .list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+a[href="#top"] {
+  position: relative;
+  left: 50%;
+  display: inline-block;
+  margin-block: 1rem;
+  transform: translateX(-50%);
+}
+
+a[href="#top"] svg {
+  width: 44px;
+  height: 44px;
+}
+
+@media (min-width: 680px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

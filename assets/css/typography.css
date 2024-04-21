@@ -1,0 +1,78 @@
+/* @link https://utopia.fyi/type/calculator?c=360,16,1.25,1920,18,1.333,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step -1: 12.8px → 13.5034px */
+  --step--1: clamp(0.8rem, 0.7899rem + 0.0451vi, 0.844rem);
+  /* Step 0: 16px → 18px */
+  --step-0: clamp(1rem, 0.9712rem + 0.1282vi, 1.125rem);
+  /* Step 1: 20px → 23.994px */
+  --step-1: clamp(1.25rem, 1.1924rem + 0.256vi, 1.4996rem);
+  /* Step 2: 25px → 31.984px */
+  --step-2: clamp(1.5625rem, 1.4618rem + 0.4477vi, 1.999rem);
+  /* Step 3: 31.25px → 42.6347px */
+  --step-3: clamp(1.9531rem, 1.7889rem + 0.7298vi, 2.6647rem);
+  /* Step 4: 39.0625px → 56.832px */
+  --step-4: clamp(2.4414rem, 2.1851rem + 1.1391vi, 3.552rem);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-size: var(--step-3);
+}
+
+h1,
+h1 + p {
+  margin: 0;
+  color: var(--color-white);
+}
+
+h1 + p {
+  margin-top: var(--space-xs);
+  font-size: var(--step-1);
+  font-family: "Quicksand";
+}
+
+h2 {
+  font-size: var(--step-2);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+a:not(:has(svg)) {
+  color: var(--color-base);
+  font-weight: 600;
+  background: linear-gradient(to right, #0d51609d, #0d51609d),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+  text-decoration: none;
+}
+
+a:not(:has(svg)):hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+a:focus {
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 3px;
+  text-decoration: none !important;
+  background: unset !important;
+}

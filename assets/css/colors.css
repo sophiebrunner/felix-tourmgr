@@ -1,0 +1,8 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-base: #1e2130;
+  --color-highlight: #ff6b6b;
+  --color-highlight--dark: #0d5160;
+  --color-highlight--light: #e1eaec;
+}

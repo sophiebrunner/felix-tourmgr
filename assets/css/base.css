@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  font: 500 var(--step-0) / 1.5 "Quicksand", sans-serif;
+}
+
+header,
+footer {
+  padding: 1.5rem;
+}
+
+section {
+  padding: 3rem 1.5rem;
+}
+
+::selection {
+  color: var(--color-white);
+  background-color: var(--color-highlight);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  width: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+svg {
+  width: 1rem;
+  height: auto;
+}
