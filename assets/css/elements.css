@@ -68,8 +68,6 @@ footer a:not([href="#top"]):hover {
   height: 100%;
 
   background-color: var(--color-white);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0.8),
-    0 0 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 #hero > div + [aria-label="Social media profiles"] {
@@ -110,7 +108,7 @@ footer a:not([href="#top"]):hover {
   background-color: var(--color-base);
 }
 
-#services ul.list + h3 {
+#services div + div > h3 {
   margin-top: var(--space-l);
 }
 
@@ -140,7 +138,7 @@ footer a:not([href="#top"]):hover {
 }
 
 .trigger:focus {
-  outline: 3pc solid var(--color-highlight);
+  outline: 3px solid var(--color-highlight);
   outline-offset: 3px;
 }
 
@@ -229,9 +227,91 @@ a[href="#top"] svg {
   height: 44px;
 }
 
-@media (min-width: 680px) {
-  main {
+@media (min-width: 820px) {
+  header,
+  footer {
+    padding: 3rem;
+  }
+
+  section:not(#hero, #about),
+  .container.container--hero {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 10rem;
+  }
+
+  #hero,
+  #about {
+    flex: 1;
+    padding: 0;
+  }
+
+  #hero > div {
+    height: auto;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #services div + div > h3 {
+    margin-top: 0;
+  }
+
+  .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .container.container--hero,
+  #hero {
+    background-color: var(--color-highlight--light);
+  }
+
+  .container.container--hero {
+    column-gap: 3rem;
+  }
+
+  .container.container--services {
+    grid-template-rows: auto auto;
+    column-gap: 3rem;
+  }
+
+  .container.container--services > div {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#hero {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+#about {
+  grid-column: 2;
+}
+
+.text-container {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  #hero,
+  #about {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
