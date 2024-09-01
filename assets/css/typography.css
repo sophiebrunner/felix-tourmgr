@@ -1,18 +1,16 @@
 /* @link https://utopia.fyi/type/calculator?c=360,16,1.25,1920,18,1.333,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  /* Step -1: 12.8px → 13.5034px */
-  --step--1: clamp(0.8rem, 0.7899rem + 0.0451vi, 0.844rem);
-  /* Step 0: 16px → 18px */
-  --step-0: clamp(1rem, 0.9712rem + 0.1282vi, 1.125rem);
-  /* Step 1: 20px → 23.994px */
-  --step-1: clamp(1.25rem, 1.1924rem + 0.256vi, 1.4996rem);
-  /* Step 2: 25px → 31.984px */
-  --step-2: clamp(1.5625rem, 1.4618rem + 0.4477vi, 1.999rem);
-  /* Step 3: 31.25px → 42.6347px */
-  --step-3: clamp(1.9531rem, 1.7889rem + 0.7298vi, 2.6647rem);
-  /* Step 4: 39.0625px → 56.832px */
-  --step-4: clamp(2.4414rem, 2.1851rem + 1.1391vi, 3.552rem);
+  /* Step -1: 12px → 14px */
+  --step--1: clamp(0.75rem, 0.707rem + 0.217vw, 0.875rem);
+  /* Step 0: 18px → 27px */
+  --step-0: clamp(1.125rem, 0.929rem + 0.979vw, 1.688rem);
+  /* Step 1: 27px → 36px */
+  --step-1: clamp(1.688rem, 1.493rem + 0.977vw, 2.25rem);
+  /* Step 2: 36px → 54px */
+  --step-2: clamp(2.25rem, 1.859rem + 1.957vw, 3.375rem);
+  /* Step 3: 45px → 63px */
+  --step-3: clamp(2.813rem, 2.422rem + 1.957vw, 3.938rem);
 }
 
 h1,
@@ -49,30 +47,29 @@ h3 {
 }
 
 a:not(:has(svg)) {
-  color: var(--color-base);
+  color: var(--color-highlight-3);
   font-weight: 600;
-  background: linear-gradient(to right, #0d51609d, #0d51609d),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-    );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 1),
+    rgba(255, 0, 180, 1),
+    rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 0;
   background-repeat: no-repeat;
-  transition: background-size 400ms;
+  background-position: 0 100%;
 
-  text-decoration: none;
+  text-decoration: underline 2px currentColor;
 }
 
 a:not(:has(svg)):hover {
-  background-size: 0 3px, 100% 3px;
+  background-size: 100% 2px;
+  text-decoration: none;
 }
 
 a:focus {
-  outline: 3px solid var(--color-highlight);
-  outline-offset: 3px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
   text-decoration: none !important;
   background: unset !important;
 }

@@ -1,5 +1,5 @@
 #header {
-  background-color: var(--color-base);
+  background-color: var(--color-highlight-1);
 }
 
 [aria-label="Main navigation"] {
@@ -57,7 +57,7 @@ footer a:not([href="#top"]):hover {
 
 #hero {
   padding-top: 0;
-  background-color: var(--color-base);
+  background-color: var(--color-highlight-1);
 }
 
 #hero > div {
@@ -76,12 +76,13 @@ footer a:not([href="#top"]):hover {
 
 #about h2,
 .contact__heading {
-  color: var(--color-highlight--1);
+  color: var(--color-highlight-3);
 }
 
 #about,
 #contact {
-  background-color: var(--color-highlight--light);
+  color: var(--color-highlight-1);
+  background-color: var(--color-highlight-2);
 }
 
 #about div {
@@ -92,9 +93,10 @@ footer a:not([href="#top"]):hover {
   position: relative;
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  border: 3px solid var(--color-base);
-  box-shadow: 4px 4px var(--color-highlight--dark);
+  border: 3px solid var(--color-highlight-1);
+  box-shadow: 4px 4px var(--color-highlight-1);
   background: unset;
+  text-decoration: none;
 }
 
 #about div a[href="#contact"]:hover,
@@ -104,8 +106,8 @@ footer a:not([href="#top"]):hover {
 }
 
 #services {
-  color: var(--color-white);
-  background-color: var(--color-base);
+  color: var(--color-highlight-2);
+  background-color: var(--color-highlight-3);
 }
 
 #services div + div > h3 {
@@ -117,7 +119,7 @@ footer a:not([href="#top"]):hover {
 }
 
 #services ul.list > li {
-  border-bottom: 2px solid var(--color-highlight--light);
+  border-bottom: 2px solid var(--color-highlight-2);
   padding: 1rem 0;
 }
 
@@ -138,8 +140,8 @@ footer a:not([href="#top"]):hover {
 }
 
 .trigger:focus {
-  outline: 3px solid var(--color-highlight);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-highlight-2);
+  outline-offset: 2px;
 }
 
 .trigger span {
@@ -266,7 +268,7 @@ a[href="#top"] svg {
 
   .container.container--hero,
   #hero {
-    background-color: var(--color-highlight--light);
+    background-color: var(--color-highlight-2);
   }
 
   .container.container--hero {

@@ -1,4 +1,5 @@
 html {
+  font-size: 1.125rem;
   scroll-behavior: smooth;
 }
 
@@ -17,8 +18,8 @@ section {
 }
 
 ::selection {
-  color: var(--color-white);
-  background-color: var(--color-highlight);
+  color: var(--color-black);
+  background-color: #e8ba40;
 }
 
 .visually-hidden {
