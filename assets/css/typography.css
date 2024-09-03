@@ -5,12 +5,12 @@
   --step--1: clamp(0.75rem, 0.707rem + 0.217vw, 0.875rem);
   /* Step 0: 18px → 27px */
   --step-0: clamp(1.125rem, 0.929rem + 0.979vw, 1.688rem);
-  /* Step 1: 27px → 36px */
-  --step-1: clamp(1.688rem, 1.493rem + 0.977vw, 2.25rem);
+  /* Step 1: 24px → 36px */
+  --step-1: clamp(1.5rem, 1.239rem + 1.304vw, 2.25rem);
   /* Step 2: 36px → 54px */
   --step-2: clamp(2.25rem, 1.859rem + 1.957vw, 3.375rem);
-  /* Step 3: 45px → 63px */
-  --step-3: clamp(2.813rem, 2.422rem + 1.957vw, 3.938rem);
+  /* Step 3: 24px → 59.2px */
+  --step-3: clamp(1.5rem, 0.735rem + 3.826vw, 3.7rem);
 }
 
 h1,
@@ -18,6 +18,8 @@ h2,
 h3 {
   margin-top: 0;
   font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.222;
 }
 
 h1 {
@@ -28,11 +30,12 @@ h1,
 h1 + p {
   margin: 0;
   color: var(--color-white);
+  line-height: 1.222;
 }
 
 h1 + p {
   margin-top: var(--space-xs);
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   font-family: "Quicksand";
 }
 

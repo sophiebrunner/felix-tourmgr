@@ -1,6 +1,15 @@
-const navLinks = document.querySelectorAll(
-  "nav[aria-label='Main navigation'] .list li a"
-);
+const navButton = document.getElementById("nav-button");
+navButton.setAttribute("aria-expanded", "false");
+
+navButton.addEventListener("click", () => {
+  if (navButton.getAttribute("aria-expanded") === "false") {
+    navButton.setAttribute("aria-expanded", "true");
+  } else {
+    navButton.setAttribute("aria-expanded", "false");
+  }
+});
+
+const navLinks = document.querySelectorAll("nav[aria-label='Main'] .list li a");
 
 navLinks.forEach((navlink) => {
   navlink.addEventListener("click", tagCurrentNavlink);

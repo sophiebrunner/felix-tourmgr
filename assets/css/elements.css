@@ -1,12 +1,20 @@
 #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
   background-color: var(--color-highlight-1);
 }
 
-[aria-label="Main navigation"] {
-  margin-top: var(--space-m);
+[aria-label="Main"] {
+  position: absolute;
+  display: none;
 }
 
-[aria-label="Main navigation"] ul.list {
+#nav-button[aria-expanded="true"] + [aria-label="Main"] {
+  display: block;
+}
+
+[aria-label="Main"] ul.list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -17,18 +25,18 @@
 }
 
 @media (max-width: 399.98px) {
-  [aria-label="Main navigation"] ul.list {
+  [aria-label="Main"] ul.list {
     gap: 1rem;
   }
 }
 
 @media (min-width: 400px) {
-  [aria-label="Main navigation"] ul.list {
+  [aria-label="Main"] ul.list {
     gap: 2rem;
   }
 }
 
-[aria-label="Main navigation"] ul.list li a,
+[aria-label="Main"] ul.list li a,
 footer a:not([href="#top"]) {
   color: var(--color-white);
   background: linear-gradient(to right, var(--color-white), var(--color-white)),
@@ -46,11 +54,11 @@ footer a:not([href="#top"]) {
   text-decoration: none;
 }
 
-[aria-label="Main navigation"] ul.list li a {
+[aria-label="Main"] ul.list li a {
   font-size: var(--step-1);
 }
 
-[aria-label="Main navigation"] ul.list li a:hover,
+[aria-label="Main"] ul.list li a:hover,
 footer a:not([href="#top"]):hover {
   background-size: 0 3px, 100% 3px;
 }
@@ -185,6 +193,8 @@ footer a:not([href="#top"]):hover {
 #contact svg {
   width: var(--step-0);
   vertical-align: middle;
+  color: var(--color-highlight-3);
+  fill: currentColor;
 }
 
 #contact p {
