@@ -1,5 +1,6 @@
 const navButton = document.getElementById("nav-button");
 navButton.setAttribute("aria-expanded", "false");
+navButton.setAttribute("aria-controls", "main-nav");
 
 navButton.addEventListener("click", () => {
   if (navButton.getAttribute("aria-expanded") === "false") {
@@ -32,7 +33,7 @@ const containers = document.querySelectorAll(".disclosure-widget");
 function createTrigger(text, icon) {
   const trigger = document.createElement("button");
   trigger.classList.add("trigger");
-  trigger.innerHTML = `<span>${text}</span>${icon}`;
+  trigger.innerHTML = `<span class="trigger__text">${text}</span>${icon}`;
   return trigger;
 }
 
@@ -52,7 +53,14 @@ function togglePanelVisibility(trigger, panel) {
 containers.forEach((container) => {
   const heading = container.lastElementChild.firstElementChild;
   const text = heading.innerText;
-  const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>`;
+  const icon = `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="trigger__icon trigger__icon--open" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 5l0 14" />
+  <path d="M5 12l14 0" />
+</svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="trigger__icon trigger__icon--close" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l14 0" />
+</svg>`;
 
   // create the trigger
   const trigger = createTrigger(text, icon);

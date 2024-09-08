@@ -8,197 +8,201 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <meta name="author" content="Sophie Brunner">
   <meta name="description"
-    content="Felix Meischter, tour management, arts management, project management, stage management, Hamburg, Germany, Europe">
+    content="Felix Meischter, your address for tour management, arts management, project management and stage management in Hamburg, Germany and Europe">
 </head>
 
 <body>
-  <header id="header">
-    <div>
-      <h1>Felix Meischter</h1>
-      <p>Tour & Arts Management</p>
-    </div>
-    <button id="nav-button">
-      <span>Menu</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <!-- !Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-        <path
-          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+  <header class="header" id="header">
+    <a href="/" class="header__homelink">Felix Meischter</a>
+    <button class="nav-button" id="nav-button">
+      <span class="nav-button__text">Menu</span>
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+        class="nav-button__icon nav-button__icon--open" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 8l16 0" />
+        <path d="M4 16l16 0" />
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-        <!-- !Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-        <path
-          d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+        class="nav-button__icon nav-button__icon--close" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M18 6l-12 12" />
+        <path d="M6 6l12 12" />
       </svg>
     </button>
-    <nav aria-label="Main">
-      <ul class="list">
-        <li>
-          <a href="#about">About</a>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <ul class="main-nav__list list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#about">About</a>
         </li>
-        <li>
-          <a href="#services">Services</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#services">Services</a>
         </li>
-        <li>
-          <a href="#contact">Contact</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="container container--hero">
-      <div id="hero">
-        <div>
-          <img src="assets/images/felix-meischter.jpg" alt="Portrait Felix Meischter">
-        </div>
+    <section class="hero" id="hero">
+      <div class="hero__headshot">
+        <img src="assets/images/felix-meischter.jpg" alt="Portrait Felix Meischter" />
       </div>
+      <h1>
+        Tour & Arts Manager Felix Meischter
+      </h1>
+      <p>
+        Moin, I'm Felix 👋. Nice to meet you.
+      </p>
+      <p>
+        I'm a freelance tour and arts
+        manager, currently located in Hamburg, Germany.
+      </p>
+      <p>On this website, you can <a href="#about">get to know me</a>, inform about my <a href="#services">services</a>
+        and find out, how to
+        <a href="#contact">contact me</a>.
+      </p>
+    </section>
 
-      <section id="about">
-        <h2>About</h2>
-        <div class="text-container">
-          <p id="about-1">
-            Moin, I'm Felix. Nice to meet you. I'm a freelance tour and arts
-            manager from Hanover and Hamburg, Germany.
-          </p>
-          <p id="about-2">
-            One of my current clients is Belgian Singer-Songwriter
-            <a href="http://milow.com/">MILOW</a>. I accompany him to all his
-            tour dates as well as radio and television appearances.
-          </p>
-        </div>
-        <div class="text-container">
-          <p id="about-3">
-            Before I started my own business I worked in the administration of
-            the
-            <a href="https://www.ndr.de/orchester_chor/radiophilharmonie/index.html">NDR&nbsp;Radiophilharmonie</a>
-            in Hanover, Germany. My responsibilities were all internal and
-            external communication to agencies, festivals and promoters,
-            artist assistance and support as well as video and social media
-            content.
-          </p>
-          <p id="about-4">
-            Already before and during my studies in Musicology and Arts
-            Management at the University of Music
-            <span style="font-variant: small-caps">Franz Liszt</span> Weimar I
-            was able to gain professional experience as project and tour
-            manager for several choirs I was singing with. Furthermore,
-            <a href="https://www.kunstfest-weimar.de/index.php?id=156">Kunstfest Weimar</a>
-            and
-            <a href="https://kunstfestspiele.de/en/">Kunstfestspiele Herrenhausen</a>
-            asked me to take responsibility for differenct projects in several
-            festival seasons.
-          </p>
-        </div>
-        <div>
-          <a href="#contact">Contact me</a>
-        </div>
-      </section>
-    </div>
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>
+        One of my current clients is Belgian Singer-Songwriter
+        <a href="http://milow.com/">MILOW</a>. I accompany him to all his
+        tour dates as well as radio and television appearances.
+      </p>
+      <p>
+        Before I started my own business I worked in the administration of
+        the
+        <a href="https://www.ndr.de/orchester_chor/radiophilharmonie/index.html">NDR&nbsp;Radiophilharmonie</a>
+        in Hanover, Germany. My responsibilities were all internal and
+        external communication to agencies, festivals and promoters,
+        artist assistance and support as well as video and social media
+        content.
+      </p>
+      <p>
+        Already before and during my studies in Musicology and Arts
+        Management at the University of Music
+        <span style="font-variant: small-caps">Franz Liszt</span> Weimar I
+        was able to gain professional experience as project and tour
+        manager for several choirs I was singing with. Furthermore,
+        <a href="https://www.kunstfest-weimar.de/index.php?id=156">Kunstfest Weimar</a>
+        and
+        <a href="https://kunstfestspiele.de/en/">Kunstfestspiele Herrenhausen</a>
+        asked me to take responsibility for differenct projects in several
+        festival seasons.
+      </p>
+      <p>
+        <a class="about__contact" href="#contact">Contact me</a>
+      </p>
+    </section>
 
-    <section id="services">
+
+    <section class="services" id="services">
       <h2>How can I help you?</h2>
       <div class="container container--services">
-        <div>
+        <div class="services__inner">
           <h3>Tour Management</h3>
           <p>
             Advancing and accompaniment of all kinds of concerts and tours for
             artists, bands, orchestras and choirs.
           </p>
-          <ul class="list">
-            <li>
+          <ul class="services__list list">
+            <li class="services__item">
               <div class="disclosure-widget">
                 <div class="panel">
                   <h4>Accompaniment of all tour dates</h4>
-                  <ul>
-                    <li>Festival/tour shows</li>
-                    <li>Radio and TV promotion</li>
-                    <li>Class B driver's licence</li>
+                  <ul class="disclosure-widget__list">
+                    <li class="disclosure-widget__item">Festival/tour shows</li>
+                    <li class="disclosure-widget__item">Radio and TV promotion</li>
+                    <li class="disclosure-widget__item">Class B driver's licence</li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li>
+            <li class="services__item">
               <div class="disclosure-widget">
                 <div class="panel">
                   <h4>Advancing of all show related details</h4>
-                  <ul>
-                    <li>Technical arrangements</li>
-                    <li>Travel and hotel arrangements</li>
-                    <li>Technical and hospitality riders</li>
+                  <ul class="disclosure-widget__list">
+                    <li class="disclosure-widget__item">Technical arrangements</li>
+                    <li class="disclosure-widget__item">Travel and hotel arrangements</li>
+                    <li class="disclosure-widget__item">Technical and hospitality riders</li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li>Stage management</li>
-            <li>
+            <li class="services__item">Stage management</li>
+            <li class="services__item">
               <div class="disclosure-widget">
                 <div class="panel">
                   <h4>Tour finances</h4>
-                  <ul>
-                    <li>Budgeting</li>
-                    <li>Settling of shows</li>
+                  <ul class="disclosure-widget__list">
+                    <li class="disclosure-widget__item">Budgeting</li>
+                    <li class="disclosure-widget__item">Settling of shows</li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li>
+            <li class="services__item">
               <div class="disclosure-widget">
                 <div class="panel">
                   <h4>Merchandise sales</h4>
-                  <ul>
-                    <li>Order placement</li>
-                    <li>Inventory</li>
-                    <li>Reordering of items</li>
-                    <li>On-site sales</li>
+                  <ul class="disclosure-widget__list">
+                    <li class="disclosure-widget__item">Order placement</li>
+                    <li class="disclosure-widget__item">Inventory</li>
+                    <li class="disclosure-widget__item">Reordering of items</li>
+                    <li class="disclosure-widget__item">On-site sales</li>
                   </ul>
                 </div>
               </div>
             </li>
           </ul>
         </div>
-        <div>
+        <div class="services__inner">
           <h3>Arts Administration</h3>
           <p>
             Planning and implementation of cultural projects and events such
             as theatre performances, concerts, festivals (also in the public
             space), music competitions, masterclasses etc.
           </p>
-          <ul class="list">
-            <li>Concept development</li>
-            <li>
+          <ul class="services__list list">
+            <li class="services__item">Concept development</li>
+            <li class="services__item">
               <div class="disclosure-widget">
                 <div class="panel">
                   <h4>Financials</h4>
-                  <ul>
-                    <li>Funding</li>
-                    <li>Budgeting</li>
-                    <li>Controlling</li>
-                    <li>Settlement</li>
+                  <ul class="disclosure-widget__list">
+                    <li class="disclosure-widget__item">Funding</li>
+                    <li class="disclosure-widget__item">Budgeting</li>
+                    <li class="disclosure-widget__item">Controlling</li>
+                    <li class="disclosure-widget__item">Settlement</li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li>
+            <li class="services__item">
               <div class="disclosure-widget">
                 <div class="panel">
                   <h4>Project management</h4>
-                  <ul>
-                    <li>Planning according to legal requirements</li>
-                    <li>Contract management</li>
-                    <li>Scheduling</li>
-                    <li>Implementation considering the local conditions</li>
-                    <li>
-                      Communication with all internal and external partners
-                    </li>
-                    <li>Hotel and travel arrangements</li>
-                    <li>Transport of people and material</li>
-                    <li>Assistance and support for all participants</li>
+                  <ul class="disclosure-widget__list">
+                    <li class="disclosure-widget__item">Planning according to legal requirements</li>
+                    <li class="disclosure-widget__item">Contract management</li>
+                    <li class="disclosure-widget__item">Scheduling</li>
+                    <li class="disclosure-widget__item">Implementation considering the local conditions</li>
+                    <li class="disclosure-widget__item">Communication with all internal and external partners</li>
+                    <li class="disclosure-widget__item">Hotel and travel arrangements</li>
+                    <li class="disclosure-widget__item">Transport of people and material</li>
+                    <li class="disclosure-widget__item">Assistance and support for all participants</li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li>Calling of shows</li>
-            <li>Read music</li>
+            <li class="services__item">Calling of shows</li>
+            <li class="services__item">Read music</li>
           </ul>
         </div>
       </div>
