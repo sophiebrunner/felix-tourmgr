@@ -1,0 +1,31 @@
+/* Fluid Typography */
+
+:root {
+  --step--1: clamp(0.75rem, 0.707rem + 0.217vw, 0.875rem);
+  --step-0: clamp(1.125rem, 0.995rem + 0.652vw, 1.5rem);
+  --step-1: clamp(1.5rem, 1.239rem + 1.304vw, 2.25rem);
+  --step-2: clamp(2.25rem, 1.859rem + 1.957vw, 3.375rem);
+  --step-3: clamp(2rem, 1.826rem + 0.87vw, 2.5rem);
+}
+
+/* Fluid Spacing  */
+
+:root {
+  --space-3xs: clamp(0.25rem, 0.2356rem + 0.0641vi, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.4856rem + 0.0641vi, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.7212rem + 0.1282vi, 0.875rem);
+  --space-s: clamp(1rem, 0.9712rem + 0.1282vi, 1.125rem);
+  --space-m: clamp(1.125rem, 0.125rem + 5vw, 4rem);
+  --space-l: clamp(1.25rem, 0.815rem + 2.174vw, 2.5rem);
+  --space-xl: clamp(2rem, 1.304rem + 3.478vw, 4rem);
+}
+
+/* Colors */
+
+:root {
+  --color-black: #000000;
+  --color-white: oklch(97.85% 0 254.02);
+  --color-highlight-1: oklch(15.43% 0.0439 254.02);
+  --color-highlight-2: oklch(89.12% 0.0483 262);
+  --color-highlight-3: oklch(29.27% 0.1299 261.42);
+}
